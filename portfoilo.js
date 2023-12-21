@@ -1,5 +1,5 @@
 // function([string1, string2], target id, [color1, color2])
-/*consoleText(['Josiah Davis.', ], 'name', ['#4040e9',]);
+consoleText(['Software Developer/ Cyber Security rookie', ], 'name',);
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
   const visible = true;
@@ -44,7 +44,7 @@ function consoleText(words, id, colors) {
     visible = !visible;
   }, 400);
 }
-*/
+
 // active hamburger menu 
 let menuIcon = document.querySelector(".menu-icon");
 let navlist = document.querySelector(".navlist")
