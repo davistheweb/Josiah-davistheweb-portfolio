@@ -13,7 +13,11 @@
     border-radius: 5px;
     
 }
-
+/*
+::-webkit-scrollbar-track{
+    background: #fff;
+}
+*/
 :root{
     --bg-color:#1b1a1a;
     --gradient-white-bg:linear-gradient(180deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
@@ -589,6 +593,21 @@ section {
     transition: all 0.5s ease-in-out;
 }
 
+
+/* Contact Style*/
+.contact-i{
+    width: 100%;
+    background: #000;
+    padding: 1rem;    
+}
+.contact-i input,
+.contact-i form textarea{
+    width: 100%;
+}
+textarea{
+    resize: none;
+}
+
 @keyframes moveText{
     0%,10%,100%{
         background-position: -24rem 0;
@@ -638,4 +657,4 @@ section {
    }
 }
 
-/* Contact Sections--*/
+
