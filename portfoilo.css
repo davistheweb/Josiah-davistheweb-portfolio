@@ -604,6 +604,33 @@ section {
 .contact-i form textarea{
     width: 100%;
 }
+.contact-i form input,
+.contact-i form textarea{
+    padding: .8rem;
+    outline: none;
+    border: 1px solid #ebe7e7;
+    margin: .5rem 0;
+    border-radius: 7px;
+}
+.cText{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    background: #222;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    font-weight: 400;
+    
+}
+.contact-i form button{
+    width: 15%;
+    background: #3a3939;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
 textarea{
     resize: none;
 }
