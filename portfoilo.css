@@ -596,6 +596,7 @@ section {
 
 /* Contact Style*/
 .contact-i{
+    display: flexbox;
     width: 100%;
     padding: 1rem;    
 }
@@ -611,6 +612,11 @@ section {
     margin: .5rem 0;
     border-radius: 7px;
 }
+form input:focus, form textarea:focus{
+    filter: brightness(100%);
+    background: #a4daf0;
+
+}
 .cText{
     text-align: center;
     color: #fff;
@@ -623,13 +629,44 @@ section {
     font-weight: 400;
     
 }
-.contact-i form button{
-    width: 15%;
-    background: #3a3939;
-    padding: 1rem;
-    border-radius: 10px;
+.con-btn{
+    background: #87ceeb;
+    width: 20%;
+    padding: 1rem 0;
+    border-radius: 20px;
     cursor: pointer;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;  
+    border: 2px solid #87ceeb;
+    display: inline-block;
+    overflow: hidden;
+    transition: 0.29s ease-in;
+    
 }
+.con-btn:hover{
+    color: #87ceeb;
+    background: #333;
+    border: 3px solid #87ceeb;
+    transition: 0.8s ease-in;
+
+}
+.con-btn::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #87ceeb;
+    left: -5%;
+    bottom: 0;
+    transform: skewX(-19deg);
+    transition: 0.3s linear;
+    z-index: -1;
+}
+.con-btn:hover::after {
+    width: 20%;
+  }
 textarea{
     resize: none;
 }
