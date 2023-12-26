@@ -10,7 +10,8 @@
 ::-webkit-scrollbar-thumb
 {
     background: linear-gradient(#4040e9, #fff,#000);
-    border-radius: 7px;
+    border-radius: 5px;
+    
 }
 
 :root{
@@ -280,7 +281,9 @@ section {
   .con:hover::after {
     width: 110%;
   }
-
+  .multiple-text{
+    font-size: 50px;
+  }
   
   .hi {
     position: relative;
