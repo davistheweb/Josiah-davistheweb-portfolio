@@ -679,7 +679,14 @@ form input:focus, form textarea:focus{
 textarea{
     resize: none;
 }
-
+/* contact/img style*/
+    .dav-img img{
+        padding: 0 15%;
+        position: relative;
+        width: 350px;
+        height: auto;
+        z-index: 10;
+    }
 @keyframes moveText{
     0%,10%,100%{
         background-position: -24rem 0;
