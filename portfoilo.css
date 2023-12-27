@@ -595,6 +595,9 @@ section {
 
 
 /* Contact Style*/
+.contact-info{
+    display: flex;
+}
 .contact-i{
     width: 100%;
     padding: 1rem;    
