@@ -632,7 +632,6 @@ form input:focus, form textarea:focus{
     color: #fff;
     text-transform: uppercase;
     width: 100%;
-    background: #222;
     border: 1px solid #fff;
     border-radius: 5px;
     padding: 1rem;
