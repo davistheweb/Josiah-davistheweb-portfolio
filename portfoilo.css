@@ -5,13 +5,13 @@
   @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia:wght@700&family=Roboto:wght@100&display=swap');
 ::-webkit-scrollbar
 {
-    width: 12px;
-    overflow-y: hidden;
-    overflow-x: scroll;
+    width: 5px;
     display: hidden;
+    height: 13px;
 }
 ::-webkit-scrollbar:hover{
     display: block;
+    overflow-y: scroll;
 }
 ::-webkit-scrollbar-thumb
 {
@@ -152,6 +152,7 @@ section {
     width: 100%;
   }
   .scroll-down {
+    color: #87ceeb;
     position: absolute;
     right: -20px;
     bottom: 3.3rem;
@@ -167,11 +168,22 @@ section {
   .scroll-down--left {
     left: -2px;
     right: auto;
+    
   }
   
-  .scroll-down span {
+  .scroll-down a {
+    background: #242323;
+    border-radius: 7px;
+    color: #ccc;
+    cursor: pointer;
+    padding: .3rem;
+    color: #87ceeb;
+    text-align: center;
     display: inline-block;
     animation: scroll 0.6s linear infinite alternate-reverse;
+  }
+  .scroll-down a i{
+    margin: 1px 1px 1px 1px;
   }
   @keyframes scroll {
     0% {
@@ -545,8 +557,7 @@ section {
 }
 .coding .item i{
     font-size: 100px;
-    color: #fff;
-    border-radius: 12px;
+
     
 }
 #html   {
