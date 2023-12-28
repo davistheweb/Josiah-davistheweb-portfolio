@@ -170,9 +170,6 @@ section {
     right: auto;
     
   }
-  .dn{
-    text-align: center;
-  }
   .scroll-down a {
     background: #242323;
     border-radius: 7px;
@@ -184,6 +181,7 @@ section {
     display: inline-block;
     animation: scroll 0.6s linear infinite alternate-reverse;
   }
+  .scroll-down a i{}
   @keyframes scroll {
     0% {
       transform: translateX(-7px);
@@ -272,10 +270,10 @@ section {
 }
   .con  {
     text-decoration: none;
-    color: aqua;
+    color:#87ceeb ;
     font-size: 20px;
     letter-spacing: 2px;
-    border: 1px solid aqua;
+    border: 1px solid #87ceeb;
     padding: 7px 25px;
     display: inline-block;
     position: absolute;
@@ -292,7 +290,7 @@ section {
     position: absolute;
     width: 0;
     height: 100%;
-    background-color: aqua;
+    background-color: #87ceeb;
     left: -5%;
     bottom: 0;
     transform: skewX(-19deg);
@@ -753,6 +751,37 @@ textarea{
     justify-content: center;
     animation: animate 1s linear infinite;
 }
+
+#progress{
+    position: fixed;
+    /* background: #194eb9; */
+    z-index: 1000;
+    bottom: 60px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    color: #faf7fc;
+    cursor: pointer;
+    box-shadow: rgba(50,50,93,0.25)0px 50px 100px -20px,
+    rgba(0,0,0,0.3)0px 30px 60px -30px,
+    rgba(10,37,64,0.35)0px -2px 6px 0px inset;
+}
+
+
+#progress-value{
+    display: grid;
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    background: #fff;
+    border-radius: 50%;
+    color: #fff;
+    place-items: center;
+    font-size: 25px;
+}
+
 @keyframes moveText{
     0%,10%,100%{
         background-position: -24rem 0;
