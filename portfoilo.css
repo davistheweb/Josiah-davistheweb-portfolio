@@ -745,18 +745,15 @@ textarea{
         padding: 1.5rem;
         background: rgba(255,255,255,0.08);
         display: inline-block;
-        border-radius: 20px;
-        border: 1px solid #fff;
         cursor: pointer;
     }
     .icon-name2{
+        color: #fff;
         width: 120%;
         margin: 5px -10px 10px;
         padding: 1.5rem;
         background: rgba(255,255,255,0.08);
         display: inline-block;
-        border-radius: 20px;
-        border: 1px solid #fff;
         cursor: pointer;
     }
     .icon-name p{
