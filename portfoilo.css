@@ -59,14 +59,7 @@ body{
     padding: 20px;
     
 }
-/*
-.demac{
-    background-color: #ccc;
-    padding: 12px;
-    height: 11px;
-    clip-path: circle();
-}
-*/
+
 .demac2{
     background-color: #ccc;
     padding: .1px;
@@ -186,6 +179,9 @@ section {
     font-size: 14px;
     color: #ccc;
   }
+  .scroll-down a i{
+    vertical-align: middle;
+  }
   .scroll-down--left {
     left: -2px;
     right: auto;
@@ -202,7 +198,7 @@ section {
     display: inline-block;
     animation: scroll 0.6s linear infinite alternate-reverse;
   }
-  .scroll-down a i{}
+  
   @keyframes scroll {
     0% {
       transform: translateX(-7px);
@@ -447,13 +443,14 @@ section {
 }
 
 .seprator{
-    margin: 70px 50px 30px;
-    padding: 10px 20px;
+    margin: 70px -60px 30px;
+    padding: .7rem;
     background: rgba(255,255,255,0.08);
     display: inline-block;
     color: #fff;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1px solid #fff;
+    cursor: pointer;
     
     
 }
@@ -484,9 +481,10 @@ section {
     margin-top: 35px;
 }
 .hire-btn{
+    top: 5%;
     background: #fff;
     font-family: kalnia;
-    padding: 6px 30px;
+    padding: 6px 25px;
     border: none;
     color: #4040e9;
     font-size: 16px;
@@ -643,52 +641,78 @@ section {
     gap: 3rem;
 }
 .contact-i{
-    width: 100%;
-    padding: 1rem;    
+        width: 100%;
+        
 }
-.contact-i input,
+.contact-i .ss
+{
+    width:30%;
+    height: 10.5vh;
+
+}
+.contact-i .sd{
+    width:35%;
+    height: 10.5vh;
+    margin-left: 23px;
+}
+.contact-i .sh{
+    width: 70%;
+    height: 10.5vh;
+}
 .contact-i form textarea{
-    width: 100%;
+    width: 70%;
 }
 .contact-i form input,
 .contact-i form textarea{
+    background-color: #3e3e3e;
     padding: .8rem;
     outline: none;
-    border: 1px solid #ebe7e7;
-    margin: .5rem 0;
+    margin: .5rem ;
+    border: 1px solid #3e3e3e;
     border-radius: 7px;
-}
-form input:focus, form textarea:focus{
-    filter: brightness(100%);
-    background: #a4daf0;
-
-}
-.cText{
-    text-align: center;
+    font-size: 15px;
     color: #fff;
-    text-transform: uppercase;
-    width: 100%;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    padding: 1rem;
-    font-weight: 400;
+    font-weight: 900;
+}
+.contact-i form input::placeholder,
+.contact-i form textarea::placeholder
+{
+    color: #fff;
+    font-size: 15px;
+    left: 5px;
+}
+
+.cText{
+    width: 100%;  
+    text-align: end;
+    margin-bottom: 40px;
     
 }
+.cText h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight:900;
+}
+
 .con-btn{
     background: #87ceeb;
     width: 30%;
     padding: 1rem 0;
-    border-radius: 20px;
+    border-radius: 30px;
     cursor: pointer;
     border: none;
     font-size: 20px;
-    font-weight: 400;
-    color: #000;  
+    font-weight: 900;
+    color: #fff;  
     border: 2px solid #87ceeb;
     display: inline-block;
     overflow: hidden;
     transition: 0.29s ease-in;
+    margin-left: 7px;
     
+}
+.con-btn i{
+    vertical-align:middle;
 }
 .con-btn:hover{
     color: #87ceeb;
@@ -697,31 +721,47 @@ form input:focus, form textarea:focus{
     transition: 0.8s ease-in;
 
 }
-.con-btn::after{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background-color: #87ceeb;
-    left: -5%;
-    bottom: 0;
-    transform: skewX(-19deg);
-    transition: 0.3s linear;
-    z-index: -1;
-}
-.con-btn:hover::after {
-    width: 20%;
-  }
+
 textarea{
     resize: none;
 }
 /* contact/img style*/
     .dav-img img{
-        padding: 0 15%;
+        margin-top: 50px;
+        padding: 0 10% 0 8%;
         position: relative;
-        width: 350px;
+        width: 200px;
         height: auto;
         z-index: 10;
+    }
+    .user-info{
+        margin-top: .1%;
+    }
+    .icon-name p i{
+        vertical-align: middle;
+    }
+    .icon-name{
+        margin: 20px -10px 10px;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.08);
+        display: inline-block;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+    .icon-name2{
+        width: 120%;
+        margin: 5px -10px 10px;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.08);
+        display: inline-block;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+    .icon-name p{
+        color: #fff;
+        font-size: 20px;
     }
     /* Contact Socials*/
   
@@ -776,14 +816,14 @@ textarea{
 /* con demac*/
 .cdemac{
     background-color:#ccc ;
-    margin-left: 2%;
-    height: 450px;
-    padding: .1px;
-
+    height: 350px;
+    padding: 3px;
+    margin-top: 15vh;
+    margin-right: 100px;
     
 }
 
-
+/*
 .cdemac1{
     background-color: #ccc;
     position: absolute;
@@ -791,6 +831,7 @@ textarea{
     clip-path: circle();
     padding: 7px;
 }
+*/
 
 #progress{
     position: fixed;
