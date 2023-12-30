@@ -1,5 +1,5 @@
 // function([string1, string2], target id, [color1, color2])
-consoleText(['Software Developer/ Cyber Security rookie', ], 'name',);
+consoleText(['Software Developer/ Cyber Security Ethical Hacker', ], 'name',);
 function consoleText(words, id, colors,) {
   if (colors === undefined) colors = ['#fff'];
   const visible = true;
