@@ -467,13 +467,26 @@ section {
     padding: 0 50px;
 }
 
-.about .info h3{
+.is-me{
+
     color: #fff;
     font-size: 32px;
     font-weight: 600;
     font-family: Arial;
-    margin-bottom: 10px;
+    margin-top: -20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     
+}
+.about img{
+margin-top: 90px;
+    width: 100px;
+}
+.is-me span{
+    font-family: Arial;
+    font-weight: 600;
+    text-decoration: 5px underline #87ceeb;
 }
 .about .info p{
     color: #fff;
