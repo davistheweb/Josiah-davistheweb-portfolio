@@ -363,76 +363,6 @@ section {
     
 }
 
-/* Footer Style*/
-
-footer{
-    position: relative;
-    background-color: #242323;
-    padding: 80px 50px 40px;
-    margin-top: 100px;
-}
-.ft-start{
-    color: #fff;
-    display: flex;
-    align-items: end;
-    justify-content: space-around;
-    position: absolute;
-    background-color: #87ceeb;
-    padding: 30px 25px;
-    border-radius: 10px;
-    width: 60%;
-    top: -15%;
-    left: 35%;
-}
-.ft-start h3{
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-.ft-start h3 span{
-    text-decoration: underline;
-    color: #fff;
-}
-.ft-start p{
-    font-size: 17px;
-    width: 35%;
-    margin-bottom: 10px;
-}
-.contact-me{
-    background-color: #333;
-    color: #fff;
-    font-size: 20px;
-    border: 1px solid #333;
-    padding: 15px 25px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-.ft-start button i{
-    vertical-align: middle;
-}
-footer .ft-clo{
-    display: flex;
-    align-items: start;
-}
-
-footer .ft-clo .about-ft-clo{
-    flex: 3;
-}
-footer .abt-ft-clo .ft-name p{
-    color: #fff;
-    margin-bottom: 25px;
-    margin-left: 30px;
-    font-size: 25px;
-    font-weight: 600;
-}
-footer .abt-ft-clo .ft-name p i{
-    vertical-align: middle;
-}
-footer .abt-ft-clo .ft-name2 p{
-    color: #fff;
-    margin-left: 30px;
-    font-size: 15px;
-}
-
 @keyframes floatImage{
     0%{
         transform: translateY(0);
@@ -538,7 +468,7 @@ footer .abt-ft-clo .ft-name2 p{
 }
 
 .about .info h3{
-    color: #4040e9;
+    color: #fff;
     font-size: 32px;
     font-weight: 600;
     font-family: Arial;
@@ -840,7 +770,6 @@ textarea{
     height: 45px;
     margin-top:10px;
 }
-
 .my-socials .hand{
     width: 42px;
     height: 42px;
@@ -911,6 +840,158 @@ textarea{
     padding: 7px;
 }
 */
+
+/* Footer Style*/
+
+footer{
+    position: relative;
+    background-color: #242323;
+    padding: 80px 50px 40px;
+    margin-top: 100px;
+}
+.ft-start{
+    color: #fff;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    position: absolute;
+    background-color: #87ceeb;
+    padding: 30px 25px;
+    border-radius: 10px;
+    width: 60%;
+    top: -15%;
+    left: 35%;
+}
+.ft-start h3{
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.ft-start h3 span{
+    text-decoration:2px underline;
+    color: #fff;
+}
+.ft-start p{
+    font-size: 17px;
+    width: 35%;
+    margin-bottom: 10px;
+}
+.contact-me{
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.ft-start button i{
+    vertical-align: middle;
+}
+footer .ft-clo{
+    display: flex;
+    align-items: start;
+}
+
+footer .ft-clo .about-ft-clo{
+    flex: 3;
+}
+footer .abt-ft-clo .ft-name p{
+    color: #fff;
+    margin-bottom: 25px;
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+footer .abt-ft-clo .ft-name p i{
+    vertical-align: middle;
+}
+footer .abt-ft-clo .ft-name2 p{
+    color: #fff;
+    margin-left: 30px;
+    font-size: 15px;
+}
+footer .abt-ft-clo .linkcol1{
+    flex: 3;
+}
+footer .linkcol1{
+    margin-top: 40px;
+    margin-left: 170px;
+    display: block;
+}
+footer .linkcol1 a{
+    color: #fff;
+    display: block;
+    text-decoration: 4px underline #87ceeb;
+    font-size: 20px;
+    line-height: 26px;
+}
+ /* Socials*/
+  
+  .fottersocials{
+    display: flex;
+    gap: 10%;
+    width: 220px;
+    height: 45px;
+    margin-top: 40px;
+    margin-left: 170px;
+}
+
+.fottersocials .hand{
+    width: 42px;
+    height: 42px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    border-radius: 15%;
+    z-index: 1;
+    
+}
+
+
+.socials .hand:hover{
+    background: #4d4747;
+    color: #fff;
+}
+
+.bg-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-icon span{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: var(--gradient-color-bg);
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footer-end{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 30px;
+    
+}
+.footer-end p{
+    color: #fff;
+}
+.footer-end a{
+    color: #87ceeb;
+   
+}
+.footer-end a span{
+    text-decoration: 3px underline #fff;
+}
 
 #progress{
     position: fixed;
