@@ -480,21 +480,52 @@ section {
     
 }
 .about img{
-margin-top: 90px;
+margin-top: 20px;
+align-items: start;
+justify-content: start;
     width: 100px;
+}
+.about-demac{
+    background-color:#ccc ;
+    height: 350px;
+    padding: 3px;
+    margin-top: 15vh;
+    margin-right: 100px;
+    
+}
+.about-demac1{
+    background-color: #ccc;
+    position: absolute;
+    transform: translateY(225px);
+    clip-path: circle();
+    padding: 7px;
 }
 .is-me span{
     font-family: Arial;
     font-weight: 600;
     text-decoration: 5px underline #87ceeb;
 }
+ .about-info1{
+    color: #fff;
+    margin-top: 50px;
+    font-size: 20px;
+    
+}
+.about-info1 h1 span{
+    text-decoration: 5px underline #87ceeb;
+}
 .about .info p{
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
+    width: 70%;
 }
 
 .about .info button{
     margin-top: 35px;
+    font-size: 18px;
+}
+.about .info button i{
+    vertical-align: middle;
 }
 .hire-btn{
     top: 5%;
