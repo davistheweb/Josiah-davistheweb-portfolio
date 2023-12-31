@@ -45,24 +45,27 @@ function consoleText(words, id, colors,) {
   }, 400);
 }
 
-// active hamburger menu 
-let menuIcon = document.querySelector(".menu-icon");
-let navlist = document.querySelector(".navlist")
-menuIcon.addEventListener("click",()=>{
-    menuIcon.classList.toggle("active");
-    navlist.classList.toggle("active");
-    document.body.classList.toggle("open");
-});
+// active menu
 
-// remove navlist
-navlist.addEventListener("click",()=>{
-    navlist.classList.remove("active");
-    menuIcon.classList.remove("active");
-    document.body.classList.remove("open");
-})
+let sections = document.querySelectorAll('section');
+let navLists = document.querySelectorAll('header ul a');
 
+window.onscroll = () => {
+	sections.forEach(sec => {
+		let top = window.scrollY;
+		let offset = sec.offsetTop;
+		let height = sec.offsetHeight;
+		let id = sec.getAttribute('id');
 
-
+		if(top >= offset && top < offset + height) {
+			navLists.forEach(links => {
+				links.classList.remove('active');
+				document.querySelector('header ul a[href*=' + id + ']').classList.add('active');
+			});
+		
+	};
+	});
+};
 // rotate text js code 
 let text = document.querySelector(".text p");
 

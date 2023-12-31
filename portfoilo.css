@@ -98,14 +98,31 @@ ul.navlist{
 }
 
 .navlist li a{
+    position: relative;
     display: inline-flex;
     font-weight: 600;
     color: #fff;
+    padding: 0 10px;
     
 }
-.navlist li a:hover{
-  text-decoration: 2px underline #87ceeb;
+.navlist li a:after{
+    content: "";
+    position: absolute;
+    background-color: #87ceeb;
+    height: 4px;
+    width:0;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+    margin-left: 10px;
 }
+.navlist li a:hover,
+.navlist li a.active::after
+{
+  width: 80%;
+  
+}
+
 
 
 .right-header{
@@ -940,7 +957,7 @@ footer{
     border: 1px solid #333;
     padding: 15px 25px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    cursor: pointer;
 }
 .ft-start button i{
     vertical-align: middle;
