@@ -401,7 +401,7 @@ section {
     transition: all 0.3 ease ;
 }
 .guarantee .item:hover{
-    box-shadow: 0 0 3px #8F9779, 0 0 15px #8F9779, 0 0 25px #8F9779, 0 0 25px #8F9779, 0 0 15px #8F9779;
+    box-shadow: 0 0 25px #4c4b4b, 0 0 25px #4c4b4b, 0 0 25px #4c4b4b, 0 0 20px #4c4b4b, 0 0 25px #4c4b4b;
 }
 
 .guarantee .item .icon{
