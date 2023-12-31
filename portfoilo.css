@@ -75,8 +75,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #333;
-    z-index: 100;
+    background-color: #333;
+    z-index: 1;
     transition: .3s;
 }
 
@@ -84,16 +84,18 @@ header .logo{
     font-size: 1.7rem;
     font-weight: 700;
     color: #fff;
+    
 }
 
 
 
 ul.navlist{
     display: flex;
+    margin-right: -40%;
 }
 
 .navlist li{
-    margin: 0 1rem;
+    margin: 0 5px;
     
 }
 
@@ -116,7 +118,7 @@ ul.navlist{
     transition: 0.5s;
     margin-left: 10px;
 }
-.navlist li a:hover,
+.navlist li a:hover::after,
 .navlist li a.active::after
 {
   width: 80%;
@@ -126,6 +128,7 @@ ul.navlist{
 
 
 .right-header{
+    margin: 0 -10px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -166,13 +169,6 @@ ul.navlist{
     transition: .4s;
 }
 
-.menu-icon.active::before{
-    transform: rotate(-45deg) translate(-6px , 6px);
-}
-
-.menu-icon.active::after{
-    transform: rotate(45deg)translate(-8px , -8px);
-}
 
 .menu-icon.active .bar{
     opacity: 0;
@@ -477,7 +473,9 @@ section {
     
     
 }
-
+.seprator i{
+    vertical-align: middle;
+}
 .about{
     color: #fff;
     display: flex;

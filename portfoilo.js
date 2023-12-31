@@ -47,15 +47,15 @@ function consoleText(words, id, colors,) {
 
 // active menu
 
-let sections = document.querySelectorAll('section');
-let navLists = document.querySelectorAll('header ul a');
+const sections = document.querySelectorAll('section');
+const navLists = document.querySelectorAll('header ul a');
 
 window.onscroll = () => {
 	sections.forEach(sec => {
-		let top = window.scrollY;
-		let offset = sec.offsetTop;
-		let height = sec.offsetHeight;
-		let id = sec.getAttribute('id');
+		const top = window.scrollY;
+		const offset = sec.offsetTop;
+		const height = sec.offsetHeight;
+		const id = sec.getAttribute('id');
 
 		if(top >= offset && top < offset + height) {
 			navLists.forEach(links => {
