@@ -1237,6 +1237,7 @@ footer .youtube-link{
     color: var(--white-color);
     background-color: var(--black-color);
     padding: .9rem;
+    border-radius: 3px;
 }
 footer .youtube-link i{
     vertical-align: middle;
