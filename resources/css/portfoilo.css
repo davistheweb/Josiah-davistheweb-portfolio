@@ -837,7 +837,7 @@ a {
   }
   
   /* For medium devices */
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     .card__content {
       margin-inline: 3rem;
     }
@@ -1166,7 +1166,7 @@ footer .linkcol1 a{
     width: 220px;
     height: 45px;
     margin-top: 40px;
-    margin-left: 170px;
+    margin-left: 100px;
 }
 
 .fottersocials .hand{
@@ -1208,10 +1208,47 @@ footer .linkcol1 a{
     justify-content: center;
     
 }
+
+footer .youtube{
+   flex: 4;
+   position: relative;
+   display: block;
+}
+footer .youtube-head{
+    color: var(--white-color);
+    margin-left: 70%;
+    margin-top: -6.5%;
+    font-size: 17px;
+    position: absolute;
+}
+footer .youtube-description{
+    color:var(--white-color);
+    margin-left: 70%;
+    margin-top:-4%;
+    position: absolute;
+    text-decoration: 2px underline var(--main-color);
+}
+footer .youtube-link{
+    position: absolute;
+    margin-left: 70%;
+    margin-top: -1%;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    padding: .9rem;
+}
+footer .youtube-link i{
+    vertical-align: middle;
+    color: red;
+}
+footer .youtube-link:hover{
+    box-shadow: 0 0 1px red, 2px 5px red, 0 0 15px red, 0 0 10px red, 0 0 10px red;
+}
 .footer-end{
     text-align: center;
     margin-top: 70px;
-    font-size: 30px;
+    font-size: 25px;
     
 }
 .footer-end p{
@@ -1224,7 +1261,6 @@ footer .linkcol1 a{
 .footer-end a span{
     text-decoration: 5px underline #87ceed;
 }
-
 .scroll__up {
     position: fixed;
     right: 1rem;
