@@ -27,6 +27,7 @@
 */
 :root{
     --bg-color:#1b1a1a;
+    --bcg-color:#333;
     --gradient-white-bg:linear-gradient(180deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
     --gradient-color-bg:linear-gradient(185deg, white, #e2dfdf );
     --main-color:#87ceeb;
@@ -585,15 +586,12 @@ justify-content: start;
     margin-bottom: 20px;
 }
 .skills .left .info h3 span{
-    text-decoration: 5px underline  #87ceed;
+    text-decoration: 5px underline  var(--main-color);
 }
 .skills .left .info p{
     color: #fff;
     font-size: 19px;
     width: 70%;
-}
-.skills .left button{
-    margin-top: 30px;
 }
 
 .coding{
@@ -698,7 +696,165 @@ justify-content: start;
     transition: all 0.5s ease-in-out;
 }
 /* Project style */
-
+.project-info h3{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.project-info h3 span{
+    text-decoration: 5px underline  var(--main-color);
+}
+.project-info p{
+    color: #fff;
+    font-size: 19px;
+    width: 70%;
+}
+a {
+    text-decoration: none;
+  }
+  
+  /*=============== CARD ===============*/
+  .container {
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card__container {
+    padding-block: 5rem;
+  }
+  
+  .card__content {
+    margin-inline: 1.75rem;
+    border-radius: 1.25rem;
+   
+  }
+  
+  .card__article {
+    
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .card__image {
+    position: relative;
+    margin-bottom: -.75rem;
+  }
+  
+  .card__data {
+    background-color: var(--bcg-color);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .card__img {
+    width: 250px;
+    margin: 0 auto;
+   position: relative;
+    z-index: 5;
+      border-radius: 10px;
+  display: flex;
+    height: auto;
+  }
+  
+ 
+  .card__name {
+    font-size: var(--h2-font-size);
+    color: var(--white-color);
+    margin-bottom: .75rem;
+  }
+  
+  .card__description {
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+    color: var(--white-color);
+  }
+  
+  .card__button {
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: .75rem 1.5rem;
+    border-radius: .35rem;
+    color: var(--white-color);
+    font-weight: bolder;
+  }
+  .card__button:hover{
+    background-color: #99dbf5;
+  }
+  .card__button i{
+    vertical-align: middle;
+  }
+  
+  /* Swiper class */
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    content: "";
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: initial;
+    height: initial;
+    font-size: 3rem;
+    color: var(--main-color);
+    display: none;
+    margin-top: -5%;
+  }
+  
+  .swiper-button-prev {
+    margin-left: 5px;
+  }
+  
+  .swiper-button-next {
+    margin-right: 5px;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: var(--main-color);
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+  }
+  
+  /*=============== BREAKPOINTS ===============*/
+  /* For small devices */
+  @media screen and (max-width: 320px) {
+    .card__data {
+      padding: 1rem;
+    }
+  }
+  
+  /* For medium devices */
+  @media screen and (min-width: 768px) {
+    .card__content {
+      margin-inline: 3rem;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block;
+    }
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 1120px) {
+    .card__container {
+      max-width: 1120px;
+    }
+  
+    .swiper-button-prev {
+      left: -1rem;
+    }
+    .swiper-button-next {
+      right: -1rem;
+    }
+  }
   
 /* Contact Style*/
 .contact-info{

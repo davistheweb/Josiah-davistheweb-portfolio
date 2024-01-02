@@ -70,7 +70,7 @@ window.onscroll = () => {
 // Project Swiper
 let swiperCards = new Swiper(".card__content", {
   loop: true,
-  spaceBetween: 32,
+  spaceBetween: 40,
   grabCursor: true,
 
   pagination: {
@@ -93,3 +93,19 @@ let swiperCards = new Swiper(".card__content", {
     },
   },
 });
+
+// scroll reveal
+
+ScrollReveal({ 
+  distance:"90px",
+  duration:2000,
+  delay:200,
+  reset: true ,
+});
+
+
+ScrollReveal().reveal('.home-detail,.coding,.container,.contact-i', { origin: "top" });
+ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
+ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
+ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero', { origin: "bottom" });
+
