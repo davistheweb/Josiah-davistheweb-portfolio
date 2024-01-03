@@ -30,7 +30,13 @@
     --text-color:#000;
     --black-color:#000;  
     --bg-color:#c6c6c6;          
-    --demac-color:grey;                                          
+    --demac-color:grey;                       
+    --input-bg:#FAF9F6;  
+    --input-opacity:25%;               
+}
+.dark-theme{
+    --bg-color:#333;
+    --black-color:#fff;
 }
 
    *{
@@ -46,7 +52,8 @@
 body{
     height: 100vh;
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--black-color);
+    transition: all 0.8s ease;
 }
 .demac-head{
     margin-left: 2%;
@@ -72,9 +79,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--bg-color);
     z-index: 100;
     transition: .3s;
+    background-color: var(--bg-color);
 }
 
 header .logo{
@@ -128,6 +135,7 @@ ul.navlist{
     align-items: center;
     justify-content: end;
     grid-gap: .8rem;
+    color: var(--black-color);
 }
 
 .btn{
@@ -481,20 +489,20 @@ justify-content: start;
     font-size: 28px;
 }
 .guarantee .item .info p{
-    color: #fff;
+    color: var(--black-color);
     font-size: 15px;
     font-weight: 600;
 }
 
 .guarantee .item > i{
     vertical-align: middle;
-    color: #fff;
+    color: var(--black-color);
     font-size: 30px;
     transition: color 0.3s ease;
 }
 
 .skills{
-    color: #fff;
+    color: var(--black-color);
     display: flex;
     justify-content: space-around;
     padding: 0 50px;
@@ -504,7 +512,7 @@ justify-content: start;
    margin-left: -35px;
 }
 .skills .left .info h3{
-    color: #fff;
+    color: var(--black-color);
     font-size: 30px;
     margin-bottom: 20px;
 }
@@ -512,28 +520,28 @@ justify-content: start;
     text-decoration: 5px underline  var(--main-color);
 }
 .skills .left .info p{
-    color: #fff;
+    color: var(--black-color);
     font-size: 19px;
     width: 70%;
 }
 
 .coding{
-    color: #fff;
+    color: var(--black-color);
     margin-top: 45px;
     padding: 0 50px;
     gap: 50px;
     justify-content: center;
     align-items: center;
 }
-.roundsk{
-    color: #fff;
+.tool{
+    color: var(--black-color);
     font-weight: 900;
     font-size: 35px;
     margin-top: 20px;
     margin-left: -35px;
     margin-bottom: 30px; 
 }
-.roundsk span{
+.tool span{
     text-decoration: underline #87ceeb;
     
 }
@@ -557,7 +565,7 @@ justify-content: start;
       transition: all 0.5s ease-in-out;
     
 }
-.skname{
+.tool-name{
     color: #fff;
     font-size: 15px;
     text-transform: uppercase;
@@ -620,7 +628,7 @@ justify-content: start;
 }
 /* Project style */
 .project-info h3{
-    color: #fff;
+    color: var(--black-color);
     font-size: 30px;
     margin-bottom: 20px;
 }
@@ -628,7 +636,7 @@ justify-content: start;
     text-decoration: 5px underline  var(--main-color);
 }
 .project-info p{
-    color: #fff;
+    color: var(--black-color);
     font-size: 19px;
     width: 70%;
 }
@@ -666,7 +674,6 @@ a {
   }
   
   .card__data {
-    background-color: var(--bcg-color);
     padding: 1.5rem 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -681,20 +688,20 @@ a {
     z-index: 5;
       border-radius: 10px;
   display: flex;
-    height: auto;
+    height: 180px;
   }
   
  
   .card__name {
     font-size: var(--h2-font-size);
-    color: var(--white-color);
+    color: var(--black-color);
     margin-bottom: .75rem;
   }
   
   .card__description {
     font-weight: 500;
     margin-bottom: 1.75rem;
-    color: var(--white-color);
+    color: var(--black-color);
   }
   
   .card__button {
@@ -702,14 +709,15 @@ a {
     background-color: var(--main-color);
     padding: .75rem 1.5rem;
     border-radius: .35rem;
-    color: var(--white-color);
+    color: var(--black-color);
     font-weight: bolder;
     transition: all 0.5s ease;
   }
   .card__button:hover{
-    background-color: var(--bcg-color);
+    background-color: var(--black-color);
     border: 1px solid var(--main-color);
     color: var(--main-color);
+    box-shadow: var(--hover-box-shadow);
     
   }
   .card__button i{
@@ -789,26 +797,44 @@ a {
     justify-content: space-between;
     gap: 3rem;
 }
+
+.cText{
+    width: 100%;  
+    margin-bottom: 40px;
+    
+}
+.cText h2{
+    color: var(--black-color);
+    text-transform: uppercase;
+    font-weight:900;
+}
 .contact-i{
         width: 100%;
         
 }
 .contact-i .ss
 {
+    
     width:30%;
     height: 10.5vh;
+    background-color: #F2F3F4;
+    color: black;
+    
 
 }
 .contact-i .sd{
+    opacity: var(--input-opacity);
     width:35%;
     height: 10.5vh;
     margin-left: 23px;
 }
 .contact-i .sh{
+    opacity: var(--input-opacity);
     width: 70%;
     height: 10.5vh;
 }
 .contact-i form textarea{
+    opacity: var(--input-opacity);
     width: 70%;
 }
 .contact-i form input,
@@ -817,31 +843,20 @@ a {
     padding: .8rem;
     outline: none;
     margin: .5rem ;
-    border: 1px solid #3e3e3e;
+    border: 1px solid var();
     border-radius: 7px;
     font-size: 15px;
     color: #fff;
     font-weight: 900;
 }
 .contact-i form input::placeholder,
-.contact-i form textarea::placeholder
+.contact-i form input::placeholder
 {
-    color: #fff;
-    font-size: 15px;
+    color: var(--black-color);
+    font-size: 17px;
     left: 5px;
 }
 
-.cText{
-    width: 100%;  
-    text-align: end;
-    margin-bottom: 40px;
-    
-}
-.cText h2{
-    color: #fff;
-    text-transform: uppercase;
-    font-weight:900;
-}
 
 .con-btn{
     background: #87ceeb;
@@ -896,7 +911,7 @@ textarea{
         cursor: pointer;
     }
     .icon-name2{
-        color: #fff;
+        color: var(--black-color);
         width: 120%;
         margin: -30px -10px 10px;
         padding: 1.5rem;
@@ -904,7 +919,7 @@ textarea{
         cursor: pointer;
     }
     .icon-name p{
-        color: #fff;
+        color: var(--black-color);
         font-size: 20px;
     }
     /* Contact Socials*/
@@ -1004,9 +1019,9 @@ textarea{
 
 footer{
     position: relative;
-    background-color:var(--bg-white);
+    background-color:;
     padding: 80px 50px 40px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .ft-start{
     color: #fff;
@@ -1058,7 +1073,7 @@ footer .ft-clo .about-ft-clo{
     flex: 3;
 }
 footer .abt-ft-clo .ft-name p{
-    color: #fff;
+    color: var(--black-color);
     margin-bottom: 25px;
     margin-top: 40px;
     margin-left: 30px;
@@ -1069,7 +1084,7 @@ footer .abt-ft-clo .ft-name p i{
     vertical-align: middle;
 }
 footer .abt-ft-clo .ft-name2 p{
-    color: #fff;
+    color: var(--black-color);
     margin-left: 30px;
     font-size: 15px;
 }
@@ -1082,7 +1097,7 @@ footer .linkcol1{
     display: block;
 }
 footer .linkcol1 a{
-    color: #fff;
+    color: var(--black-color);
     display: block;
     text-decoration: 4px underline #87ceeb;
     font-size: 20px;
@@ -1164,7 +1179,7 @@ footer .youtube-link{
     margin-top: -1%;
     text-decoration: none;
     font-size: 20px;
-    color: var(--white-color);
+    color: #fff;
     background-color: var(--black-color);
     padding: .9rem;
     border-radius: 3px;
@@ -1184,7 +1199,7 @@ footer .youtube-link:hover{
     
 }
 .footer-end p{
-    color: #fff;
+    color: var(--black-color);
 }
 .footer-end a{
     color: #87ceeb;

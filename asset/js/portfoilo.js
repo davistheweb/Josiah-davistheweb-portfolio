@@ -94,6 +94,21 @@ let swiperCards = new Swiper(".card__content", {
   },
 });
 
+// Switch theme
+
+const theme = document.getElementById("theme")
+const themeIcon = document.getElementById("themeIcon")
+
+theme.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){
+    themeIcon.src = "fa-regular fa-sun";
+  }
+  else{
+    themeIcon.src = "fa-regular fa-moon";
+  }
+}
+
 // scroll reveal
 
 ScrollReveal({ 
