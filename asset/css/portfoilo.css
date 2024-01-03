@@ -87,7 +87,7 @@ header{
 header .logo{
     font-size: 1.7rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--black-color);
 }
 ul.navlist{
     display: flex;
@@ -101,7 +101,7 @@ ul.navlist{
     position: relative;
     display: inline-flex;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--black-color);
     padding: 0 10px;
 }
 .navlist li a:after{
@@ -125,7 +125,7 @@ ul.navlist{
     display: block;
     position: fixed;
     margin-left: 15px;
-    color: var(--text-color);
+    color: var(--black-color);
     cursor: pointer;
     
 }
