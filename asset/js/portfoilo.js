@@ -1,7 +1,7 @@
 // function([string1, string2], target id, [color1, color2])
-consoleText(['Software Developer/ Cyber Security Ethical Hacker', ], 'name',);
+consoleText(['Software Developer','Cyber Security Ethical Hacker', ], 'name',);
 function consoleText(words, id, colors,) {
-  if (colors === undefined) colors = ['grey'];
+  if (colors === undefined) colors = ['#808080'];
   const visible = true;
   const con = document.getElementById('console');
   let letterCount = 1;

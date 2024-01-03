@@ -31,12 +31,19 @@
     --black-color:#000;  
     --bg-color:#c6c6c6;          
     --demac-color:grey;                       
-    --input-bg:#FAF9F6;  
-    --input-opacity:25%;               
+    --input-bg:#dadada;  
+    --input-opacity:25%;       
+    --footer-color:#FAF0E6;     
+    --con-demac-color:grey;   
 }
 .dark-theme{
     --bg-color:#333;
     --black-color:#fff;
+    --footer-color:#1d1d1d;
+    --demac-color:#fff;
+    --input-bg:#1d1d1d; 
+    --con-demac-color:#fff; 
+    
 }
 
    *{
@@ -127,6 +134,7 @@ ul.navlist{
     margin-left: 15px;
     color: var(--black-color);
     cursor: pointer;
+    font-size:17px;
     
 }
 .right-header{
@@ -813,47 +821,39 @@ a {
         
 }
 .contact-i .ss
-{
-    
+{ 
     width:30%;
     height: 10.5vh;
-    background-color: #F2F3F4;
-    color: black;
-    
-
 }
 .contact-i .sd{
-    opacity: var(--input-opacity);
     width:35%;
     height: 10.5vh;
     margin-left: 23px;
 }
 .contact-i .sh{
-    opacity: var(--input-opacity);
     width: 70%;
     height: 10.5vh;
 }
 .contact-i form textarea{
-    opacity: var(--input-opacity);
     width: 70%;
 }
 .contact-i form input,
 .contact-i form textarea{
-    background-color: #3e3e3e;
+    background-color: var(--input-bg);
     padding: .8rem;
     outline: none;
     margin: .5rem ;
-    border: 1px solid var();
+    border: 1px solid var(--input-bg);
     border-radius: 7px;
     font-size: 15px;
-    color: #fff;
+    color: var(--black-color);
     font-weight: 900;
 }
 .contact-i form input::placeholder,
-.contact-i form input::placeholder
+.contact-i form textarea::placeholder
 {
     color: var(--black-color);
-    font-size: 17px;
+    font-size: 12px;
     left: 5px;
 }
 
@@ -997,7 +997,7 @@ textarea{
 }
 /* con demac*/
 .cdemac{
-    background-color:#ccc ;
+    background-color:var(--con-demac-color);
     height: 350px;
     padding: 3px;
     margin-top: 15vh;
@@ -1019,9 +1019,9 @@ textarea{
 
 footer{
     position: relative;
-    background-color:;
+    background-color:var(--footer-color);
     padding: 80px 50px 40px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .ft-start{
     color: #fff;
