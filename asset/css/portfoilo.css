@@ -1,8 +1,9 @@
+/* Google font*/
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Roboto:wght@100&display=swap'); 
-
-  @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Roboto:wght@100&family=Tangerine:wght@700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia:wght@700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Roboto:wght@100&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia:wght@700&family=Roboto:wght@100&display=swap');
+/* Webkit*/
 ::-webkit-scrollbar
 {
     width: 5px;
@@ -15,30 +16,25 @@
 }
 ::-webkit-scrollbar-thumb
 {
-    background: #7e7d7d;
+    background: var(--main-color);
     border-radius: 5px;
     
-    
+    /* Variables*/
 }
-/*
-::-webkit-scrollbar-track{
-    background: #fff;
-}
-*/
 :root{
-    --bg-color:#1b1a1a;
-    --bcg-color:#333;
     --gradient-white-bg:linear-gradient(180deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
     --gradient-color-bg:linear-gradient(185deg, white, #e2dfdf );
-    --main-color:#87ceeb;
-    --font-color:#90979f;
-    --hover-box-shadow:#87ceeb 0px 10px 20px,
-                       #9eddf6 0px 6px 6px;     
-    --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%);   
-    --white-color:#fff;
-    --black-color:#000;                                                      
+    --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
+    rgba(0,0,0,0.23)0px 6px 6px;     
+    --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%); 
+    --main-color:#87ceeb;  
+    --text-color:#000;
+    --black-color:#000;  
+    --bg-color:#c6c6c6;          
+    --demac-color:grey;                                          
 }
-  *{
+
+   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -47,10 +43,11 @@
     list-style: none;
     text-decoration: none;
 }
-
+    /*body*/
 body{
     height: 100vh;
-    background-color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     
 }
 .demac-head{
@@ -60,15 +57,16 @@ body{
     width: 1300px;
     height: 2px;
     padding: 20px;
-    margin-top: 90px;
+    margin-top: 70px;
     
 }
 
 .demac2{
-    background-color: #ccc;
+    background-color: var(--demac-color);
     padding: .1px;
 
 }
+    /*Navbar*/
 header{
     padding: 15px 8%;
     width: 100%;
@@ -78,7 +76,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: var(--bg-color);
     z-index: 100;
     transition: .3s;
 }
@@ -86,17 +84,15 @@ header{
 header .logo{
     font-size: 1.7rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-color);
     
 }
-header .logo span{
-    color: var(--main-color);
-}
+
 
 
 ul.navlist{
     display: flex;
-    margin-right: -40%;
+    margin-right: -25%;
 }
 
 .navlist li{
@@ -108,7 +104,7 @@ ul.navlist{
     position: relative;
     display: inline-flex;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-color);
     padding: 0 10px;
     
 }
@@ -131,7 +127,14 @@ ul.navlist{
 }
 
 
-
+.dark-toogle{
+    display: block;
+    position: fixed;
+    margin-left: 15px;
+    color: var(--text-color);
+    cursor: pointer;
+    
+}
 .right-header{
     margin: 0 -10px;
     display: flex;
@@ -141,7 +144,8 @@ ul.navlist{
 }
 
 .btn{
-    color: #fff;
+    color: var(--black-color);
+    margin-right: 55px;
     padding: 8px 10px;
     border-radius: 5px;
     font-weight: 500;
@@ -178,6 +182,7 @@ ul.navlist{
 .menu-icon.active .bar{
     opacity: 0;
 }
+/* Section */
 
 section {
     min-height: 100vh;
@@ -240,7 +245,7 @@ section {
   
   .home-detail h3 {
     font-size: 5.5rem;
-    color: white;
+    color: var(--black-color);
     font-family: "Roboto", sans-serif;
   }
   
@@ -250,9 +255,8 @@ section {
     
   }
   
-  .home-detail p {
+  .multiple-text {
     font-size: 18px;
-    color: #ccc;
     letter-spacing: 2px;
     font-family: "Open Sans", sans-serif;
     margin-bottom: 3rem;
@@ -321,7 +325,7 @@ section {
     top: 60%;
   }
   .con:hover {
-    color: #ccc;
+    color: var(--black-color);
   }
   
    .con::after {
@@ -397,74 +401,6 @@ section {
     }
 }
 
-.guarantee{
-    margin-top: 50px;
-    padding: 0 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1%;
-}
-
-.guarantee .item{
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    border-radius: 10px;
-    padding: 0 30px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: all 0.3 ease ;
-}
-.guarantee .item:hover{
-    box-shadow: 0 0 25px #4c4b4b, 0 0 25px #4c4b4b, 0 0 25px #4c4b4b, 0 0 20px #4c4b4b, 0 0 25px #4c4b4b;
-}
-
-.guarantee .item .icon{
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    background: #333;
-    display: flex;
-    
-    transition: background-color 0.3s ease;
-}
-
-.guarantee .item:hover .icon{
-    background-color: #333;
-}
-
-.guarantee .item .icon i{
-    font-size: 30px;
-    
-}
-.icon i{
-    vertical-align: middle;
-}
-.guarantee .item .info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.guarantee .item .info h3{
-    color: #fff;
-    font-size: 28px;
-}
-.guarantee .item .info p{
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.guarantee .item > i{
-    vertical-align: middle;
-    color: #fff;
-    font-size: 30px;
-    transition: color 0.3s ease;
-}
 
 .seprator{
     margin: 70px -60px 30px;
@@ -556,20 +492,81 @@ justify-content: start;
 }
 .hire-btn{
     top: 5%;
-    background: #87ceeb;
-    font-family: kalnia;
-    padding: 6px 25px;
+    background: var(--main-color);
+    padding: 15px 70px;
     border: none;
     color: #333;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3 ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .hire-btn:hover{
     
-    box-shadow: 0 0 1px #87ceeb, 2px 5px #87ceeb, 0 0 15px #87ceeb, 0 0 10px #87ceeb, 0 0 10px #87ceeb;
+    box-shadow: var(--hover-box-shadow);
+}
+.guarantee{
+    margin-top: 50px;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1%;
+}
+
+.guarantee .item{
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 30px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3 ease ;
+}
+.guarantee .item:hover{
+    box-shadow: var(--hover-box-shadow);
+}
+
+.guarantee .item .icon{
+    color: var(--black-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    transition: background-color 0.3s ease;
+}
+
+
+.guarantee .item .icon i{
+    font-size: 30px;   
+}
+.icon i{
+    vertical-align: middle;
+}
+.guarantee .item .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guarantee .item .info h3{
+    color: #fff;
+    font-size: 28px;
+}
+.guarantee .item .info p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.guarantee .item > i{
+    vertical-align: middle;
+    color: #fff;
+    font-size: 30px;
+    transition: color 0.3s ease;
 }
 
 .skills{
@@ -633,6 +630,7 @@ justify-content: start;
     border-radius: 12px;
     align-items: center;
     justify-content: center;
+      transition: all 0.5s ease-in-out;
     
 }
 .skname{
@@ -695,7 +693,6 @@ justify-content: start;
 }
 .coding .item:hover{
     background: #5f5c5c;
-    transition: all 0.5s ease-in-out;
 }
 /* Project style */
 .project-info h3{
@@ -1041,8 +1038,8 @@ textarea{
     background: #87ceeb;
     text-align: center;
     margin-top: 20px;
-    width: 50%;
-    padding: 1rem 0;
+    width: 60%;
+    padding: 1rem;
     border-radius: 30px;
     cursor: pointer;
     font-size: 20px;
@@ -1050,9 +1047,15 @@ textarea{
     color: #fff;  
     display: inline-block;
     margin-left: 80px;
+    transition: all 0.3s ease;
     
 }
+.hire-btn3:hover{
+    border: 2px solid var(--main-color);
+    background-color: var(--bcg-color);
+    color: var(--main-color);
 
+}
 /* con demac*/
 .cdemac{
     background-color:#ccc ;
@@ -1077,7 +1080,7 @@ textarea{
 
 footer{
     position: relative;
-    background-color: #242323;
+    background-color:var(--bg-white);
     padding: 80px 50px 40px;
     margin-top: 100px;
 }
@@ -1115,6 +1118,9 @@ footer{
     padding: 15px 25px;
     border-radius: 10px;
     cursor: pointer;
+}
+.contact-me:hover{
+    box-shadow: var(--hover-box-shadow);
 }
 .ft-start button i{
     vertical-align: middle;
@@ -1244,7 +1250,8 @@ footer .youtube-link i{
     color: red;
 }
 footer .youtube-link:hover{
-    box-shadow: 0 0 1px red, 2px 5px red, 0 0 15px red, 0 0 10px red, 0 0 10px red;
+    box-shadow: rgba(252, 2, 2, 0.19)0px 10px 20px,
+    rgba(244, 27, 27, 0.23)0px 6px 6px;
 }
 .footer-end{
     text-align: center;
