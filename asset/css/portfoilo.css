@@ -18,9 +18,8 @@
 {
     background: var(--main-color);
     border-radius: 5px;
-    
-    /* Variables*/
 }
+    /* Variables*/
 :root{
     --gradient-white-bg:linear-gradient(180deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
     --gradient-color-bg:linear-gradient(185deg, white, #e2dfdf );
@@ -48,7 +47,6 @@ body{
     height: 100vh;
     background-color: var(--bg-color);
     color: var(--text-color);
-    
 }
 .demac-head{
     margin-left: 2%;
@@ -58,13 +56,11 @@ body{
     height: 2px;
     padding: 20px;
     margin-top: 70px;
-    
 }
 
 .demac2{
     background-color: var(--demac-color);
     padding: .1px;
-
 }
     /*Navbar*/
 header{
@@ -85,11 +81,7 @@ header .logo{
     font-size: 1.7rem;
     font-weight: 700;
     color: var(--text-color);
-    
 }
-
-
-
 ul.navlist{
     display: flex;
     margin-right: -25%;
@@ -97,16 +89,13 @@ ul.navlist{
 
 .navlist li{
     margin: 0 5px;
-    
 }
-
 .navlist li a{
     position: relative;
     display: inline-flex;
     font-weight: 600;
     color: var(--text-color);
     padding: 0 10px;
-    
 }
 .navlist li a:after{
     content: "";
@@ -125,8 +114,6 @@ ul.navlist{
   width: 80%;
   
 }
-
-
 .dark-toogle{
     display: block;
     position: fixed;
@@ -151,20 +138,16 @@ ul.navlist{
     font-weight: 500;
     transition: all .3s ease;
 }
-
 .btn:hover,.btn-box :hover{
     box-shadow: var(--hover-box-shadow);
 }
-
 .menu-icon{
     position: relative;
     display: block;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    /* background: blue; */
 }
-
 .menu-icon .bar,
 .menu-icon::after,
 .menu-icon::before{
@@ -177,17 +160,16 @@ ul.navlist{
     margin: 6px 0;
     transition: .4s;
 }
-
-
 .menu-icon.active .bar{
     opacity: 0;
 }
-/* Section */
+    /* Section */
 
 section {
     min-height: 100vh;
     padding: 0 8%;
   }
+  /* Introduction */
   .home {
     position: relative;
     width: 100%;
@@ -225,18 +207,7 @@ section {
     display: inline-block;
     animation: scroll 0.6s linear infinite alternate-reverse;
   }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(-7px);
-    }
-    100% {
-      transform: translateX(7px);
-    }
-  }
-  
-  
-  .home-detail {
+ .home-detail {
     margin-top: 100px;
     position: relative;
     height: 150px;
@@ -263,8 +234,7 @@ section {
   }
 
   /* Socials*/
-  
-  .socials{
+    .socials{
     display: flex;
     gap: 10%;
     width: 220px;
@@ -388,28 +358,14 @@ section {
     z-index: 10;
     
 }
-
-@keyframes floatImage{
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-22px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-
 .seprator{
     margin: 70px -60px 30px;
     padding: .7rem;
     background: rgba(255,255,255,0.08);
     display: inline-block;
-    color: #fff;
+    color: var(--black-color);
     border-radius: 20px;
-    border: 1px solid #fff;
+    border: 1px solid var(--black-color);
     cursor: pointer;
     
     
@@ -418,7 +374,7 @@ section {
     vertical-align: middle;
 }
 .about{
-    color: #fff;
+    color: var(--black-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -426,46 +382,14 @@ section {
     padding: 0 50px;
 }
 
-.is-me{
-
-    color: #fff;
-    font-size: 32px;
-    font-weight: 600;
-    font-family: Arial;
-    margin-top: -20px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    
-}
 .about img{
 margin-top: 20px;
 align-items: start;
 justify-content: start;
     width: 100px;
 }
-.about-demac{
-    background-color:#ccc ;
-    height: 350px;
-    padding: 3px;
-    margin-top: 15vh;
-    margin-right: 100px;
-    
-}
-.about-demac1{
-    background-color: #ccc;
-    position: absolute;
-    transform: translateY(225px);
-    clip-path: circle();
-    padding: 7px;
-}
-.is-me span{
-    font-family: Arial;
-    font-weight: 600;
-    text-decoration: 5px underline #87ceeb;
-}
- .about-info1{
-    color: #fff;
+.about-info1{
+    color: var(--black-color);
     margin-top: 10px;
     font-size: 20px;
     
@@ -474,7 +398,7 @@ justify-content: start;
     text-decoration: 5px underline #87ceeb;
 }
 .about .info p{
-    color: #fff;
+    color: var(--black-color);
     font-size: 20px;
     width: 90%;
     
@@ -553,7 +477,7 @@ justify-content: start;
 }
 
 .guarantee .item .info h3{
-    color: #fff;
+    color: var(--black-color);
     font-size: 28px;
 }
 .guarantee .item .info p{
@@ -1322,6 +1246,26 @@ footer .youtube-link:hover{
     color: #fff;
     place-items: center;
     font-size: 25px;
+}
+@keyframes scroll {
+    0% {
+      transform: translateX(-7px);
+    }
+    100% {
+      transform: translateX(7px);
+    }
+  }
+  
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-22px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 @keyframes moveText{
