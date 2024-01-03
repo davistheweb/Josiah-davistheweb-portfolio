@@ -96,18 +96,18 @@ let swiperCards = new Swiper(".card__content", {
 
 // Switch theme
 
-const theme = document.getElementById("theme")
-const themeIcon = document.getElementById("themeIcon")
+const theme = document.getElementById("theme");
+const themeIcon = document.getElementById("themeIcon");
 
-theme.onclick = function(){
+theme.onclick = function() {
   document.body.classList.toggle("dark-theme");
-  if(document.body.classList.contains("dark-theme")){
-    themeIcon.src = "fa-regular fa-sun";
+  if (document.body.classList.contains("dark-theme")) {
+    themeIcon.innerHTML = '<i class="fa-regular fa-sun"></i>';
+  } else {
+    themeIcon.innerHTML = '<i class="fa-regular fa-moon"></i>';
   }
-  else{
-    themeIcon.src = "fa-regular fa-moon";
-  }
-}
+};
+
 
 // scroll reveal
 
