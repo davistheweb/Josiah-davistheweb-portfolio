@@ -1,15 +1,27 @@
+//hamburger
 const menu = document.querySelector("#menu-bar");
 const navlist = document.querySelector(".navlist");
+const navLinks = document.querySelectorAll(".navlist a"); // Get all links within navlist
 
 menu.addEventListener("click", () => {
   menu.classList.toggle("bx-x");
   navlist.classList.toggle("open");
 });
 
-// Remove navlist when user clicks outside the menu and navlist
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navlist.classList.remove("open"); // Close the navbar
+    menu.classList.remove("bx-x"); // Optionally remove the toggle icon's class
+  });
+});
+
+
+/* Remove navlist when user clicks outside the menu and navlist
 navlist.addEventListener("click", ()=>{
   navlist.classList.remove("open");
+  
 });
+*/
 
 /*(clickEvent){
   const isMenuOrNavlistClicked = menu.contains(event.target) || navlist.contains(event.target);
@@ -19,8 +31,8 @@ navlist.addEventListener("click", ()=>{
     menu.classList.remove("bx-x");
   }
 };
-*/
 
+*/
 
 
 // Switch theme
