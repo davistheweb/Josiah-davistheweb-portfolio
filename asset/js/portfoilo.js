@@ -1,4 +1,41 @@
-// function([string1, string2], target id, [color1, color2])
+// Switch theme
+
+const theme = document.getElementById("theme");
+const themeIcon = document.getElementById("themeIcon");
+
+theme.onclick = function() {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    themeIcon.innerHTML = '<i class="ri-sun-line"></i>';
+  } else {
+    themeIcon.innerHTML = '<i class="fa-regular fa-moon"></i>';
+  }
+};
+
+// active menu
+
+const sections = document.querySelectorAll('section');
+const navLists = document.querySelectorAll('header ul a');
+
+window.onscroll = () => {
+	sections.forEach(sec => {
+		const top = window.scrollY;
+		const offset = sec.offsetTop;
+		const height = sec.offsetHeight;
+		const id = sec.getAttribute('id');
+
+		if(top >= offset && top < offset + height) {
+			navLists.forEach(links => {
+				links.classList.remove('active');
+				document.querySelector('header ul a[href*=' + id + ']').classList.add('active');
+			});
+		
+	};
+	});
+};
+
+// function: Text Generate
+
 consoleText(['Software Developer','Cyber Security Ethical Hacker', ], 'name',);
 function consoleText(words, id, colors,) {
   if (colors === undefined) colors = ['#808080'];
@@ -43,31 +80,10 @@ function consoleText(words, id, colors,) {
     }
     visible = !visible;
   }, 400);
-}
-
-// active menu
-
-const sections = document.querySelectorAll('section');
-const navLists = document.querySelectorAll('header ul a');
-
-window.onscroll = () => {
-	sections.forEach(sec => {
-		const top = window.scrollY;
-		const offset = sec.offsetTop;
-		const height = sec.offsetHeight;
-		const id = sec.getAttribute('id');
-
-		if(top >= offset && top < offset + height) {
-			navLists.forEach(links => {
-				links.classList.remove('active');
-				document.querySelector('header ul a[href*=' + id + ']').classList.add('active');
-			});
-		
-	};
-	});
 };
 
 // Project Swiper
+
 let swiperCards = new Swiper(".card__content", {
   loop: true,
   spaceBetween: 40,
@@ -94,19 +110,6 @@ let swiperCards = new Swiper(".card__content", {
   },
 });
 
-// Switch theme
-
-const theme = document.getElementById("theme");
-const themeIcon = document.getElementById("themeIcon");
-
-theme.onclick = function() {
-  document.body.classList.toggle("dark-theme");
-  if (document.body.classList.contains("dark-theme")) {
-    themeIcon.innerHTML = '<i class="fa-regular fa-sun"></i>';
-  } else {
-    themeIcon.innerHTML = '<i class="fa-regular fa-moon"></i>';
-  }
-};
 
 
 // scroll reveal
