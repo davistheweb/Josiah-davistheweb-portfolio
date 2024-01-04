@@ -1,3 +1,28 @@
+const menu = document.querySelector("#menu-bar");
+const navlist = document.querySelector(".navlist");
+
+menu.addEventListener("click", () => {
+  menu.classList.toggle("bx-x");
+  navlist.classList.toggle("open");
+});
+
+// Remove navlist when user clicks outside the menu and navlist
+navlist.addEventListener("click", ()=>{
+  navlist.classList.remove("open");
+});
+
+/*(clickEvent){
+  const isMenuOrNavlistClicked = menu.contains(event.target) || navlist.contains(event.target);
+
+  if (!isMenuOrNavlistClicked && navlist.classList.contains("open")) {
+    navlist.classList.remove("open");
+    menu.classList.remove("bx-x");
+  }
+};
+*/
+
+
+
 // Switch theme
 
 const theme = document.getElementById("theme");

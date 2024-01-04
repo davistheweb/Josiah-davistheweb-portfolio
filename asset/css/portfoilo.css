@@ -32,6 +32,7 @@
     --input-opacity:25%;       
     --footer-color:#FAF0E6;     
     --con-demac-color:grey;   
+    --res-dec:#faf0e6;
 }
 .dark-theme{
     --bg-color:#333;
@@ -40,6 +41,7 @@
     --demac-color:#fff;
     --input-bg:#3e3e3e; 
     --con-demac-color:#fff; 
+    --res-dec:#3e3e3e;
     
 }
 
@@ -157,7 +159,6 @@ ul.navlist{
 #menu-bar{
     font-size: 20px;
     color: var(--black-color);
-    margin-right:-45px;
     display: block;
     position:absolute ;
     cursor: pointer;
@@ -165,13 +166,13 @@ ul.navlist{
     display: none;
 }
 
-@media (max-width:1200px)
+@media (max-width:1280px)
 {
     html{
         font-size: 105%;
     }
     header{
-        padding: 14px 2%;
+        padding: 16px 2%;
     }
     ul.navlist {
         padding: 5px 0;
@@ -186,7 +187,52 @@ ul.navlist{
         
     }
     .dark-toogle{
-        po
+        position: absolute;
+        margin-right: 32%;
+    }
+
+}
+@media (max-width:1070px){
+
+    #menu-bar{
+        display: block;
+        color: var(--black-color);
+        font-size: 40px;
+    }
+    .btn{
+        position: absolute;
+        margin-right: 15%;
+        font-size: 25px;
+    }
+    .dark-toogle{
+        position: absolute;
+        margin-right: 10%;
+        font-size: 24px;
+    }
+
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 400px;
+        height: 60vh;
+        background-color: var(--res-dec);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 1s ease;
+        border-radius: 10px;
+    }
+    .navlist a{
+        color: white;
+        padding: 0;
+        z-index: 1;
+        margin: 5vh 25%;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .navlist.open{
+        right: 2%;
     }
 }
 
@@ -606,9 +652,6 @@ justify-content: start;
     color: #ffd000;
 }
 #php    {
-    color: #4040ed;
-}
-#visualc    {
     color: #4040ed;
 }
 
