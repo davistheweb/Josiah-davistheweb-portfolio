@@ -6,16 +6,13 @@
 /* Webkit*/
 ::-webkit-scrollbar
 {
-    width: 5px;
-    display: hidden;
-    height: 13px;
+    width: 7px;
 }
 ::-webkit-scrollbar:hover{
-    display: block;
     overflow-y: scroll;
 }
 ::-webkit-scrollbar-thumb
-{
+{   
     background: var(--main-color);
     border-radius: 5px;
 }
@@ -39,12 +36,13 @@
 .dark-theme{
     --bg-color:#333;
     --black-color:#fff;
-    --footer-color:#1d1d1d;
+    --footer-color:#3e3e3e;
     --demac-color:#fff;
-    --input-bg:#1d1d1d; 
+    --input-bg:#3e3e3e; 
     --con-demac-color:#fff; 
     
 }
+
 
    *{
     margin: 0;
@@ -98,11 +96,11 @@ header .logo{
 }
 ul.navlist{
     display: flex;
-    margin-right: -25%;
+    margin-right: -15%;
 }
 
 .navlist li{
-    margin: 0 5px;
+    margin: 0 7px;
 }
 .navlist li a{
     position: relative;
@@ -139,7 +137,7 @@ ul.navlist{
 .btn{
     position: absolute;
     color: var(--black-color);
-    margin-right: 2rem;
+    margin-right: 3rem;
     padding: 8px 10px;
     border-radius: 5px;
     font-weight: 500;
@@ -165,6 +163,31 @@ ul.navlist{
     cursor: pointer;
     z-index: 1001;
     display: none;
+}
+
+@media (max-width:1200px)
+{
+    html{
+        font-size: 105%;
+    }
+    header{
+        padding: 14px 2%;
+    }
+    ul.navlist {
+        padding: 5px 0;
+        margin-left: -45%;
+    }
+    .right-header{
+        padding: 2px 0;
+    }
+    .btn{
+        position: absolute;
+        margin-right: 35%;
+        
+    }
+    .dark-toogle{
+        po
+    }
 }
 
     /* Section */
