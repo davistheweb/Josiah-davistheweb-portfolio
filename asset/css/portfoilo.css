@@ -30,9 +30,9 @@
     --demac-color:grey;                       
     --input-bg:#dadada;  
     --input-opacity:25%;       
-    --footer-color:#FAF0E6;     
+    --footer-color:#dddcdb;     
     --con-demac-color:grey;   
-    --res-dec:#faf0e6;
+    --res-dec:#dddcdb;
 }
 .dark-theme{
     --bg-color:#333;
@@ -147,6 +147,9 @@ ul.navlist{
 }
 .btn:hover,.btn-box :hover{
     box-shadow: var(--hover-box-shadow);
+}
+.navlist .resp {
+    display: none;
 }
 .dark-toogle{
     display: block;
@@ -1325,7 +1328,7 @@ footer .youtube-link:hover{
 }
 
 /* BreakPoints*/
-@media (max-width:1280px)
+@media (max-width:1200px)
 {
     html{
         font-size: 105%;
@@ -1352,16 +1355,19 @@ footer .youtube-link:hover{
     }
 
 }
-@media (max-width:768px){
+@media (max-width:991px){
 
-
-}
-@media (max-width:600px){
-    header{
-        position: fixed;
+    header,section,footer{
         padding-left: 3%;
         padding-right: 3%;
     }
+    .home{
+        flex-direction: column-reverse;
+    }
+
+}
+@media (max-width:768px){
+   
     #menu-bar{
         display: block;
         color: var(--black-color);
@@ -1376,25 +1382,35 @@ footer .youtube-link:hover{
         margin-right: 15%;
         font-size: 24px;
     }
-
+    .navlist .resp{
+        display: block;
+        font-size: 15px;
+        position: absolute;
+        align-items: start;
+        justify-content: center;
+        margin-left: 10%;
+    }
     .navlist{
         position: absolute;
-        top: 100%;
+        top: .0%;
         right: -100%;
-        width: 400px;
+        width: 270px;
         height: 100vh;
         background-color: var(--res-dec);
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: start;
         transition: all 1s ease;
         border-radius: 10px;
     }
+
     .navlist a{
         color: white;
         padding: 0;
         z-index: 1;
-        margin: 5vh 25%;
+        margin: 5vh 20%;
+        
         font-size: 20px;
         text-transform: uppercase;
     }
