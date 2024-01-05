@@ -166,76 +166,6 @@ ul.navlist{
     display: none;
 }
 
-@media (max-width:1280px)
-{
-    html{
-        font-size: 105%;
-    }
-    header{
-        padding: 16px 2%;
-    }
-    ul.navlist {
-        padding: 5px 0;
-        margin-left: -45%;
-    }
-    .right-header{
-        padding: 2px 0;
-    }
-    .btn{
-        position: absolute;
-        margin-right: 35%;
-        
-    }
-    .dark-toogle{
-        position: absolute;
-        margin-right: 32%;
-    }
-
-}
-@media (max-width:1070px){
-
-    #menu-bar{
-        display: block;
-        color: var(--black-color);
-        font-size: 40px;
-    }
-    .btn{
-        position: absolute;
-        margin-right: 15%;
-        font-size: 25px;
-    }
-    .dark-toogle{
-        position: absolute;
-        margin-right: 10%;
-        font-size: 24px;
-    }
-
-    .navlist{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 400px;
-        height: 60vh;
-        background-color: var(--res-dec);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: all 1s ease;
-        border-radius: 10px;
-    }
-    .navlist a{
-        color: white;
-        padding: 0;
-        z-index: 1;
-        margin: 5vh 25%;
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-    .navlist.open{
-        right: 2%;
-    }
-}
-
     /* Section */
 
 section {
@@ -824,17 +754,26 @@ a {
     .card__data {
       padding: 1rem;
     }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+        margin-right: -30rem;
+        
+        font-size: 30px;
+    }
   }
   
   /* For medium devices */
   @media screen and (min-width: 768px) {
     .card__content {
-      margin-inline: 3rem;
+      margin-inline: 1rem;
     }
   
     .swiper-button-next,
     .swiper-button-prev {
       display: block;
+      position: absolute;
+      margin-right: -10px;
     }
   }
   
@@ -848,7 +787,7 @@ a {
       left: -1rem;
     }
     .swiper-button-next {
-      right: -1rem;
+      right: .1rem;
     }
   }
   
@@ -1384,3 +1323,83 @@ footer .youtube-link:hover{
     stroke-dashoffset: var(--target);
    }
 }
+
+/* BreakPoints*/
+@media (max-width:1280px)
+{
+    html{
+        font-size: 105%;
+    }
+    header{
+        padding: 16px 2%;
+    }
+    ul.navlist {
+        padding: 5px 0;
+        margin-left: -15%;
+    }
+    .right-header{
+        padding: 2px 0;
+    }
+    .btn{
+        position: absolute;
+        margin-right: 5%;
+        
+    }
+    .dark-toogle{
+        position: absolute;
+        margin-right:2% ;
+        
+    }
+
+}
+@media (max-width:768px){
+
+
+}
+@media (max-width:600px){
+    header{
+        position: fixed;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    #menu-bar{
+        display: block;
+        color: var(--black-color);
+        font-size: 40px;
+    }
+    .btn{
+        display: none;
+    }
+    
+    .dark-toogle{
+        position: absolute;
+        margin-right: 15%;
+        font-size: 24px;
+    }
+
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 400px;
+        height: 100vh;
+        background-color: var(--res-dec);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 1s ease;
+        border-radius: 10px;
+    }
+    .navlist a{
+        color: white;
+        padding: 0;
+        z-index: 1;
+        margin: 5vh 25%;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .navlist.open{
+        right: 2%;
+    }
+}
+
