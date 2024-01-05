@@ -7,12 +7,11 @@
 ::-webkit-scrollbar
 {
     width: 7px;
+    
 }
-::-webkit-scrollbar:hover{
-    overflow-y: scroll;
-}
+
 ::-webkit-scrollbar-thumb
-{   
+{   overflow-y:scroll;
     background: var(--main-color);
     border-radius: 5px;
 }
@@ -177,8 +176,10 @@ section {
   }
   /* Introduction */
   .home {
-    position: relative;
+    min-height: 100vh;
     width: 100%;
+    position: relative;
+    align-items: center;
   }
   .scroll-down {
     color: #87ceeb;
@@ -245,7 +246,7 @@ section {
     gap: 10%;
     width: 220px;
     height: 45px;
-    margin-top: 120px;
+    margin-top: 70px;
 }
 
 .socials .hand{
@@ -289,16 +290,17 @@ section {
 }
   .con  {
     text-decoration: none;
-    color:#87ceeb ;
+    color:var(--black-color) ;
     font-size: 20px;
+    font-weight: bold;
     letter-spacing: 2px;
-    border: 1px solid #87ceeb;
+    border: 2px solid #87ceeb;
     padding: 7px 25px;
     display: inline-block;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     transition: 0.2s ease-in;
-    top: 60%;
+    top: 30%;
   }
   .con:hover {
     color: var(--black-color);
@@ -330,8 +332,8 @@ section {
   .hi::after {
     content: "<Davistheweb>";
     position: absolute;
-    top: -2rem;
-    left: -5rem;
+    top: -4rem;
+    left: -1rem;
     color: #808080;
     font-family: "La Belle Aurore", cursive;
     font-size: 18px;
@@ -347,7 +349,7 @@ section {
     font-size: 18px;
   }
 
-  .isdav{
+  .hero-img{
     padding: 0 10% ;
     margin-left: 1%;
     position: relative;
@@ -355,7 +357,7 @@ section {
     animation-delay: 0.9s;
     transform: translateY(40px);
   }
-  .isdav img{
+  .hero-img img{
     padding: 0 15%;
     position: fixed;
     width: 400px;
@@ -525,7 +527,7 @@ justify-content: start;
 .coding{
     color: var(--black-color);
     margin-top: 45px;
-    padding: 0 50px;
+    
     gap: 50px;
     justify-content: center;
     align-items: center;
@@ -1203,60 +1205,6 @@ footer .youtube-link:hover{
 .footer-end a span{
     text-decoration: 5px underline #87ceed;
 }
-.scroll__up {
-    position: fixed;
-    right: 1rem;
-    bottom: -50%;
-    background: var(--white-color);
-    display: inline-flex;
-    padding: 6px;
-    font-size: 1.25rem;
-    color: var(--white-color);
-    z-index: 10;
-    border-radius: .25rem;
-    box-shadow: 0 4px 16px hsla(0, 0%, 0%, .1);
-    transition: bottom .4s, transform .4s, background .4s;
-
-}
-
-.scroll__up:hover {
-    transform: translateY(-.5rem);
-    transition: .3s;
-}
-
-.show-scroll {
-    bottom: 3rem;
-}
-
-#progress{
-    position: fixed;
-    /* background: #194eb9; */
-    z-index: 1000;
-    bottom: 60px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    display: none;
-    place-items: center;
-    border-radius: 50%;
-    color: #faf7fc;
-    cursor: pointer;
-    box-shadow: rgba(50,50,93,0.25)0px 50px 100px -20px,
-    rgba(0,0,0,0.3)0px 30px 60px -30px,
-    rgba(10,37,64,0.35)0px -2px 6px 0px inset;
-}
-
-
-#progress-value{
-    display: grid;
-    height: calc(100% - 12px);
-    width: calc(100% - 12px);
-    background: #fff;
-    border-radius: 50%;
-    color: #fff;
-    place-items: center;
-    font-size: 25px;
-}
 @keyframes scroll {
     0% {
       transform: translateX(-7px);
@@ -1331,29 +1279,11 @@ footer .youtube-link:hover{
 @media (max-width:1200px)
 {
     html{
-        font-size: 105%;
-    }
-    header{
-        padding: 16px 2%;
-    }
-    ul.navlist {
-        padding: 5px 0;
-        margin-left: -15%;
-    }
-    .right-header{
-        padding: 2px 0;
-    }
-    .btn{
-        position: absolute;
-        margin-right: 5%;
-        
-    }
-    .dark-toogle{
-        position: absolute;
-        margin-right:2% ;
-        
-    }
+        font-size: 90%;
 
+}
+@media (max-width: 1012px){
+   
 }
 @media (max-width:991px){
 
@@ -1361,13 +1291,37 @@ footer .youtube-link:hover{
         padding-left: 3%;
         padding-right: 3%;
     }
+    .hero-img{
+        margin-bottom: -45rem;
+        position: absolute;
+  }
+  .hero-img img{
+    position: fixed;
+    width: 350px;
+    height: auto;
+  }
+    ul.navlist{
+        margin-left: -8%;
+    }
+.home-detail h3{
+    font-size: 3rem;
+}
     .home{
         flex-direction: column-reverse;
     }
-
+    
 }
-@media (max-width:768px){
+@media (max-width:770px){
    
+    .hero-img{
+        
+        margin-bottom: -70rem;
+        position: absolute;
+  }
+  .hero-img img{
+    position: fixed;
+    
+}
     #menu-bar{
         display: block;
         color: var(--black-color);
@@ -1424,3 +1378,4 @@ footer .youtube-link:hover{
     }
 }
 
+}
