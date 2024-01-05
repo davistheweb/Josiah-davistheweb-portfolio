@@ -60,6 +60,7 @@ body{
     background-color: var(--bg-color);
     color: var(--black-color);
     transition: all 0.8s ease;
+    overflow-x: hidden;
 }
 .demac-head{
     margin-left: 2%;
@@ -1276,14 +1277,11 @@ footer .youtube-link:hover{
 }
 
 /* BreakPoints*/
-@media (max-width:1200px)
+@media  (max-width:1200px)
 {
     html{
         font-size: 90%;
 
-}
-@media (max-width: 1012px){
-   
 }
 @media (max-width:991px){
 
@@ -1313,6 +1311,9 @@ footer .youtube-link:hover{
 }
 @media (max-width:770px){
    
+   .scroll-down{
+    display: none;
+   }
     .hero-img{
         
         margin-bottom: -70rem;
