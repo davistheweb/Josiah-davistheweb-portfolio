@@ -1285,6 +1285,9 @@ footer .youtube-link:hover{
 }
 @media (max-width:991px){
 
+    body{
+        overflow-x: hidden;
+    }
     header,section,footer{
         padding-left: 3%;
         padding-right: 3%;
