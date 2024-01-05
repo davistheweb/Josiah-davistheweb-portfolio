@@ -1402,4 +1402,9 @@ footer .youtube-link:hover{
         right: 2%;
     }
 }
+@media (max-width:390px){
+    .btn{
+        display: none;
+    }
+}
 
