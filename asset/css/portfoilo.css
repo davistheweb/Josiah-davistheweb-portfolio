@@ -57,11 +57,12 @@
 }
     /*body*/
 body{
+    
     height: 100vh;
     background-color: var(--bg-color);
     color: var(--black-color);
     transition: all 0.8s ease;
-    overflow-x: hidden;
+    
 }
 .demac-head{
     margin-left: 2%;
@@ -69,8 +70,7 @@ body{
     flex-direction: column;
     width: 1300px;
     height: 2px;
-    padding: 20px;
-    margin-top: 70px;
+    padding: 15px;
 }
 
 .demac2{
@@ -388,7 +388,7 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 70px;
-    padding: 0 50px;
+    
 }
 
 .about img{
@@ -1278,30 +1278,36 @@ footer .youtube-link:hover{
 }
 
 /* BreakPoints*/
-@media  (max-width:1200px)
+@media screen and (max-width:1200px)
 {
     html{
         font-size: 90%;
 
 }
 }
-@media (max-width:991px){
+@media screen and (max-width:991px){
 
-    body{
-        overflow-x: hidden;
-    }
+    
     header,section,footer{
         padding-left: 3%;
         padding-right: 3%;
     }
+    .demac-head{
+        display: none;
+    }
+   .scroll-down{
+    display: none;
+   }
+
     .hero-img{
-        margin-bottom: -45rem;
+        margin-bottom: -55rem;
         position: absolute;
   }
   .hero-img img{
     position: fixed;
-    width: 350px;
+    width: 370px;
     height: auto;
+    left: 20rem;
   }
     ul.navlist{
         margin-left: -8%;
@@ -1313,9 +1319,16 @@ footer .youtube-link:hover{
     .home{
         flex-direction: column-reverse;
     }
+    .guarantee{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .guarantee .item{
+        flex-basis: 70%;
+    }
     
 }
-@media (max-width:768px){
+@media screen and (max-width:760px){
     .hi::before{
         top: 30vh;
     }
@@ -1325,15 +1338,6 @@ footer .youtube-link:hover{
    .scroll-down{
     display: none;
    }
-    .hero-img{
-        
-        margin-bottom: -70rem;
-        position: absolute;
-  }
-  .hero-img img{
-    position: fixed;
-    
-}
     #menu-bar{
         display: block;
         color: var(--black-color);
@@ -1384,15 +1388,26 @@ footer .youtube-link:hover{
         right: 2%;
     }
 }
-@media(max-width:600px){
+@media screen and (max-width:600px){
+    section{
+        overflow:hidden;
+    }
     .hi::after{
         left: 0%;
     }
     .hi::before{
-        top: 30vh;
+        top: 15vh;
+    }
+    .hero-img{
+        left: -13rem;
+        margin-bottom: -45rem;
+    }
+    .hero-img img{
+        width: 250px;
+        
     }
     .con{
-        top: 10vh;
+        top: 7vh;
     }
     .home-detail h3{
         font-size: 3rem;
@@ -1400,21 +1415,27 @@ footer .youtube-link:hover{
     .navlist{
         width: 250px;
     }
+    .seprator{
+        margin-top: -4px;
+        margin-left: 15px;
+    }
     
 }
-@media (max-width:330px){
+@media screen and (max-width:480px){
     .hi::before{
-        font-size: 12px;
+        font-size: 20px;
         bottom: -10rem;
         left: 15rem;
     }
+    .about img{
+        display: none;
+    }
     .hi::after{
 
-        font-size: 12px;
+        font-size: 20px;
     }
     .home-detail h3{
-        font-size: 2rem;
-        top: ;
+        font-size: 2.5rem;
 
     }
     .home{
@@ -1423,8 +1444,16 @@ footer .youtube-link:hover{
     .multiple-text{
         font-size: 13px;
     }
+    .resp{
+        font-size: 20px;
+    }
+   
+    .navlist{
+        width: 230px;
+    }   
+}
+@media screen and(max-width:320px){
     .hero-img{
         display: none;
     }
-    
 }
