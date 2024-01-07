@@ -1388,7 +1388,9 @@ footer .youtube-link:hover{
     .contact-i form textarea{
         width: 100%;
     }
-    
+    .cdemac{
+        display: none;
+    }
 @media screen and (max-width:768px){
     html,body{
         width: 100%;
