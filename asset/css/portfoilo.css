@@ -1292,6 +1292,7 @@ footer .youtube-link:hover{
         padding: 0;
         margin: 0;
         overflow-x: hidden;
+        
     }
     
     header,section,footer{
@@ -1322,6 +1323,9 @@ footer .youtube-link:hover{
 .home-detail h3{
     font-size: 6rem;
     
+}
+ .container-home{
+    margin-bottom: 0px;
 }
 .seprator{
     margin-left: 5px;
@@ -1391,14 +1395,8 @@ footer .youtube-link:hover{
     .cdemac{
         display: none;
     }
+}
 @media screen and (max-width:768px){
-    html,body{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-    }
     .hi::before{
         top: 30vh;
     }
@@ -1459,13 +1457,6 @@ footer .youtube-link:hover{
     }
 }
 @media screen and (max-width:600px){
-    html,body{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-    }
     .hi::after{
         left: 0%;
     }
@@ -1496,13 +1487,6 @@ footer .youtube-link:hover{
     
 }
 @media screen and (max-width:480px){
-    html,body{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-    }
     .hi::before{
         font-size: 20px;
         bottom: -10rem;
@@ -1537,13 +1521,6 @@ footer .youtube-link:hover{
     }
 }
 @media screen and(max-width:320px){
-    html,body{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-    }
     .hero-img{
         display: none;
     }
