@@ -721,6 +721,11 @@ a {
   .card__button i{
     vertical-align: middle;
   }
+  .card__button:hover>i:hover{
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+  }
   
   /* Swiper class */
   .swiper-button-prev:after,
