@@ -45,7 +45,7 @@ theme.onclick = function() {
   if (document.body.classList.contains("dark-theme")) {
     themeIcon.innerHTML = '<i class="ri-sun-line"></i>';
   } else {
-    themeIcon.innerHTML = '<i class="fa-regular fa-moon"></i>';
+    themeIcon.innerHTML = '<i class="ri-moon-line"></i>';
   }
 };
 
