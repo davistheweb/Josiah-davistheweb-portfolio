@@ -10,6 +10,7 @@
     
 }
 
+
 ::-webkit-scrollbar-thumb
 {   overflow-y:scroll;
     background: var(--main-color);
@@ -713,7 +714,6 @@ a {
   }
   .card__button:hover{
     background-color: var(--black-color);
-    border: 1px solid var(--main-color);
     color: var(--main-color);
     box-shadow: var(--hover-box-shadow);
     
@@ -721,10 +721,10 @@ a {
   .card__button i{
     vertical-align: middle;
   }
-  .card__button:hover>i:hover{
+  .card__button:hover{
     position: relative;
     display: inline-block;
-    margin-left: 5px;
+    transform:translateX(.5rem);
   }
   
   /* Swiper class */
@@ -852,7 +852,7 @@ a {
 .con-btn{
     background: #87ceeb;
     width: 30%;
-    padding: 1rem;
+    padding: 10px;
     border-radius:1rem;
     cursor: pointer;
     border: none;
@@ -1015,7 +1015,8 @@ color: var(--main-color);
 footer{
     position: relative;
     background-color:var(--footer-color);
-    padding: 80px 50px 0px;
+    padding: 80px 60px 0px;
+    padding-bottom: 20px;
     margin-top: 100px;
 }
 .ft-start{
@@ -1095,9 +1096,10 @@ footer .linkcol1 a{
     color: var(--black-color);
     
     display: block;
-    text-decoration: 4px underline var(--main-color);
+    text-decoration: 2px underline var(--main-color);
     font-size: 20px;
     line-height: 26px;
+    row-gap: .75rem;
 }
  /* Socials*/
   
@@ -1124,7 +1126,9 @@ footer .linkcol1 a{
     z-index: 1;
     
 }
-
+.fottersocials .hand:hover{
+    transform: translateY(-1rem);
+}
 
 .socials .hand:hover{
     background: #4d4747;
@@ -1138,27 +1142,15 @@ footer .linkcol1 a{
     align-items: center;
 }
 
-.bg-icon span{
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    background: var(--gradient-color-bg);
-    border-radius: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
 footer .youtube{
    flex: 4;
    position: relative;
    display: block;
 }
-footer .youtube-head{
+ .youtube-head{
     color: var(--white-color);
     margin-left: 70%;
-    margin-top: -6.5%;
+    margin-top: -7%;
     font-size: 17px;
     position: absolute;
 }
@@ -1204,6 +1196,30 @@ footer .youtube-link:hover{
 }
 .footer-end a span{
     text-decoration: 5px underline #87ceed;
+}
+.scroll__up {
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background: var(--main-color);
+    display: inline-flex;
+    padding: 6px;
+    font-size: 1.25rem;
+    color: var(--black-color);
+    z-index: 10;
+    border-radius: .25rem;
+    box-shadow: 0 4px 16px hsla(0, 0%, 0%, .1);
+    transition: bottom .4s, transform .4s, background .4s;
+
+}
+
+.scroll__up:hover {
+    transform: translateY(-.5rem);
+    transition: .3s;
+}
+
+.show-scroll {
+    bottom: 3rem;
 }
 @keyframes scroll {
     0% {
@@ -1325,13 +1341,30 @@ footer .ft-clo .abt-ft-clo{
     flex-basis: 50%;
 }
 footer .linkcol1{
- 
+    margin-left: -12%;
    flex-basis: 50%;
 }
 
 footer .ft-clo .fottersocials{
     flex-basis: 30%;
     margin-left: 3%;
+}
+footer .youtube{
+    margin-top: -15%;
+    right: 5%;
+}
+ footer .youtube-head{
+   font-size: 17px;
+   right:5% ;
+}
+footer .youtube-description{
+    margin-top: 5px;
+}
+footer .youtube-link{
+    margin-top: 5%;
+}
+.footer-end{
+    font-size: 12px;
 }
 }
 @media screen and (max-width:991px){
@@ -1556,7 +1589,69 @@ footer .ft-clo .fottersocials{
         margin-top: -4px;
         margin-left: 15px;
     }
-    
+    .about-info1{
+        font-size: 19px;
+    }
+    .about .info p{
+        font-size: 15px;
+    }
+   
+    .skills .left .info h3{
+        font-size: 19px;
+    }
+    .skills .left .info p{
+        font-size: 15px;
+    }
+    .tool{
+        font-size: 17px;
+    }
+    .coding .item{
+        width: 160px;
+    }
+    .coding .item-l{
+        gap: 10px;
+     }
+    .coding .item-f{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .coding .item-d {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .contact-info{
+        flex-direction: column;
+    }
+    .contact-i{
+        
+        margin-left: -2px;
+    }
+    .contact-i .ss{
+        width:120%;
+        height: 55px;
+    }
+    .contact-i .sd{
+        width:120%;
+        height: 55px;
+        margin-left: 3.5px;
+    }
+    .contact-i .sh{
+        width:120%;
+        height: 55px;
+    }
+    .contact-i form textarea{
+        width:120%;
+        height: 100%;
+    }
+    .contact-i form input::placeholder,
+    .contact-i form textarea::placeholder{
+        font-size: 12px;
+    }
+    .con-btn{
+        font-size: 10px;
+    }
+   
+
 }
 @media screen and (max-width:480px){
     .hi::before{
