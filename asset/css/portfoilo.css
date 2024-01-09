@@ -1182,7 +1182,7 @@ footer .youtube-link:hover{
 }
 .footer-end{
     text-align: center;
-    margin-top: 110px;
+    margin-top: 150px;
     font-size: 25px;
     
 }
@@ -1197,7 +1197,7 @@ footer .youtube-link:hover{
 .footer-end a span{
     text-decoration: 5px underline #87ceed;
 }
-.scroll__up {
+.scroll-btn {
     position: fixed;
     right: 1rem;
     bottom: -50%;
@@ -1206,14 +1206,14 @@ footer .youtube-link:hover{
     padding: 6px;
     font-size: 1.25rem;
     color: var(--black-color);
-    z-index: 10;
+    z-index: 100;
     border-radius: .25rem;
     box-shadow: 0 4px 16px hsla(0, 0%, 0%, .1);
     transition: bottom .4s, transform .4s, background .4s;
 
 }
 
-.scroll__up:hover {
+.scroll-btn:hover {
     transform: translateY(-.5rem);
     transition: .3s;
 }
@@ -1297,6 +1297,7 @@ footer .youtube-link:hover{
     html{
         font-size: 90%;
 }
+
 html,body{
     width: 100%;
     height: 100%;
@@ -1305,6 +1306,7 @@ html,body{
     overflow-x: hidden;
     
 }
+
 .hero-img{
     right: 9%;
 }
@@ -1350,7 +1352,7 @@ footer .ft-clo .fottersocials{
     margin-left: 3%;
 }
 footer .youtube{
-    margin-top: -15%;
+    margin-top: -10%;
     right: 5%;
 }
  footer .youtube-head{
@@ -1364,18 +1366,12 @@ footer .youtube-link{
     margin-top: 5%;
 }
 .footer-end{
-    font-size: 12px;
+    font-size: 15px;
 }
 }
+
 @media screen and (max-width:991px){
-    html,body{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-        
-    }
+  
     
     header,section,footer{
         padding-left: 3%;
@@ -1385,9 +1381,7 @@ footer .youtube-link{
     .demac-head{
         display: none;
     }
-   .scroll-down{
-    display: none;
-   }
+  
 
     .hero-img{
         margin-bottom: -55rem;
@@ -1395,9 +1389,9 @@ footer .youtube-link{
   }
   .hero-img img{
     position: fixed;
-    width: 370px;
+    width: 430px;
     height: auto;
-    left: 20rem;
+    left: -25rem;
   }
     ul.navlist{
         margin-left: -8%;
@@ -1547,7 +1541,7 @@ footer .youtube-link{
         transition: all 1s ease;
         border-radius: 10px;
     }
-
+ 
     .navlist a{
         color: white;
         padding: 0;
@@ -1560,6 +1554,8 @@ footer .youtube-link{
     .navlist.open{
         right: 2%;
     }
+    .hero-img img{
+    width: 220%;
 }
 @media screen and (max-width:600px){
     .hi::after{
@@ -1569,7 +1565,7 @@ footer .youtube-link{
         top: 15vh;
     }
     .hero-img{
-        left: -13rem;
+        left: -1rem;
         margin-bottom: -45rem;
     }
     .hero-img img{
@@ -1650,8 +1646,61 @@ footer .youtube-link{
     .con-btn{
         font-size: 10px;
     }
-   
-
+    .dav-img{
+        align-content: center;
+        justify-content: center;
+        margin-right: 2px;
+    }
+     .ft-start{
+        top: -9%;
+       flex-wrap: wrap;
+       
+    }
+   footer .ft-start p{
+        font-size: 15px;
+        width: 100%;
+    }
+   .contact-me{
+    font-size: 17px;
+   }
+   footer .ft-clo .about-ft-clo{
+    flex-basis: 100%;
+   }
+   footer .abt-ft-clo .ft-name p{
+    font-size: 17px;
+   }
+   footer .abt-ft-clo .ft-name2 p{
+    width: 110%;
+   }
+   footer .linkcol1{
+    flex-basis: 100%;
+    margin-left: 7%;
+   }
+   footer .ft-clo .fottersocials{
+    flex-basis: 60%;
+   }
+   footer .youtube{
+    margin-top: 10%;
+    right: 35vh;
+   }
+  .youtube .youtube-head{
+    font-size: 15px;
+    right: -16rem;
+    width: 100%;
+   }
+   .youtube .youtube-description{
+    width: 100%;
+    left:-5%;
+   }
+   .youtube .youtube-link{
+    margin-top: 10%;
+    left: -5%;
+    width: 50%;
+   }
+   footer .footer-end p{
+    padding-bottom: -115%;
+   }
+    
 }
 @media screen and (max-width:480px){
     .hi::before{
@@ -1701,4 +1750,5 @@ footer .youtube-link{
           
           font-size: 30px;
       }
+}
 }
