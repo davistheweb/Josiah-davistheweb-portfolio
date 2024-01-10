@@ -305,6 +305,9 @@ section {
     transition: 0.2s ease-in;
     top: 30%;
   }
+  .con i{
+    vertical-align: middle;
+  }
   .con:hover {
     color: var(--black-color);
   }
@@ -1368,6 +1371,7 @@ footer .youtube-link{
 .footer-end{
     font-size: 15px;
 }
+
 }
 
 @media screen and (max-width:991px){
@@ -1421,7 +1425,9 @@ footer .youtube-link{
     }
         .guarantee{
         flex-wrap: wrap;
-      
+    }
+    .guarantee .item{
+        box-shadow: var(--hover-box-shadow);
     }
     .skills{
         justify-content: space-between;
@@ -1446,7 +1452,9 @@ footer .youtube-link{
         width: 100%;
         font-size: 22px;
     }
-   
+   #contact{
+    margin-top: -40%;
+   }
     .contact-i{
         width: 80%;
         margin-left: -2px;
@@ -1493,6 +1501,15 @@ footer .youtube-link{
     }
     .cdemac{
         display: none;
+    }
+    footer .youtube{
+        margin-top: -15%;
+        right: 5%;
+    }
+
+
+    footer{
+        margin-top: -10%;
     }
 }
 @media screen and (max-width:768px){
@@ -1557,6 +1574,7 @@ footer .youtube-link{
     .hero-img img{
     width: 220%;
 }
+}
 @media screen and (max-width:600px){
     .hi::after{
         left: 0%;
@@ -1582,7 +1600,6 @@ footer .youtube-link{
         width: 250px;
     }
     .seprator{
-        margin-top: -4px;
         margin-left: 15px;
     }
     .about-info1{
@@ -1750,5 +1767,4 @@ footer .youtube-link{
           
           font-size: 30px;
       }
-}
 }
