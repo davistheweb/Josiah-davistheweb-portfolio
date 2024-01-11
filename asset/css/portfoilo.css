@@ -1,8 +1,6 @@
 /* Google font*/
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Roboto:wght@100&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Roboto:wght@100&family=Tangerine:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia:wght@700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
 /* Webkit*/
 ::-webkit-scrollbar
 {
@@ -33,6 +31,16 @@
     --footer-color:#dddcdb;     
     --con-demac-color:grey;   
     --res-dec:#dddcdb;
+
+    /*---========Font Variables, Typo & Wieght=======----*/
+
+    --general-font:'poppins', sans-serif;
+    --font-bolder:600;
+    --font-bold:500;
+    --font-regular:400;
+    --font-medium:300;
+    --font-small:100;
+
 }
 .dark-theme{
     --bg-color:#333;
@@ -94,8 +102,9 @@ header{
 }
 
 header .logo{
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: var(--general-font);
+    font-weight: var(--font-bolder);
     color: var(--black-color);
 }
 ul.navlist{
@@ -109,7 +118,8 @@ ul.navlist{
 .navlist li a{
     position: relative;
     display: inline-flex;
-    font-weight: 600;
+    font-weight: var(--font-bolder);
+    font-family: var(--general-font);
     color: var(--black-color);
     padding: 0 10px;
 }
@@ -144,7 +154,8 @@ ul.navlist{
     margin-right: 3rem;
     padding: 8px 10px;
     border-radius: 5px;
-    font-weight: 500;
+    font-family: var(--general-font);
+    font-weight: var(--font-bolder);
     transition: all .3s ease;
 }
 .btn:hover,.btn-box :hover{
@@ -158,7 +169,7 @@ ul.navlist{
     margin-left:-46px;
     color: var(--black-color);
     cursor: pointer;
-    font-size:17px;
+    font-size:15px;
     
 }
 #menu-bar{
@@ -174,18 +185,20 @@ ul.navlist{
     /* Section */
 
 section {
-    min-height: 100vh;
+    
     padding: 0 8%;
   }
   /* Introduction */
   .home {
     min-height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
+    grid-gap: 4rem;
   }
   .scroll-down {
-    color: #87ceeb;
     position: absolute;
     right: -20px;
     bottom: 3.3rem;
@@ -196,7 +209,7 @@ section {
     transform: rotate(90deg);
     display: block;
     font-size: 14px;
-    color: #ccc;
+    
   }
   .scroll-down a i{
     vertical-align: middle;
@@ -209,10 +222,11 @@ section {
   .scroll-down a {
     background: #242323;
     border-radius: 7px;
-    color: #ccc;
     cursor: pointer;
+    font-family: var(--general-font);
+    font-weight: var(--font-small);
     padding: .3rem;
-    color: #87ceeb;
+    color: var(--main-color);
     text-align: center;
     display: inline-block;
     animation: scroll 0.6s linear infinite alternate-reverse;
@@ -223,11 +237,35 @@ section {
     height: 150px;
     transform: translateY(40px);
   }
+  .hi {
+    position: relative;
+  }
+  .hi::after {
+    content: "<Davistheweb>";
+    position: absolute;
+    top: -4rem;
+    left: -1rem;
+    color: #808080;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 18px;
+  }
   
+  .hi::before {
+    content: "<Davistheweb>";
+    position: absolute;
+    bottom: -11.2rem;
+    right: 0.2rem;
+    color: #808080;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 18px;
+  }
+ 
   .home-detail h3 {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
+    font-weight: 500;
+    font-family: var(--general-font);
     color: var(--black-color);
-    font-family: "Roboto", sans-serif;
+    
   }
   
   .home .container-home {
@@ -239,12 +277,55 @@ section {
   .multiple-text {
     font-size: 18px;
     letter-spacing: 2px;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--general-font);
+    font-weight: var(--font-medium);
     margin-bottom: 3rem;
   }
 
+  .con  {
+    text-decoration: none;
+    color:var(--black-color) ;
+    font-size: 20px;
+    font-weight: var(--font-bolder);
+    font-family: var(--general-font);
+    letter-spacing: 2px;
+    border: 2px solid var(--main-color);
+    padding: 7px 20px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s ease-in;
+    top: 30%;
+  }
+  .con i{
+    vertical-align: middle;
+  }
+  .con:hover {
+    color: var(--black-color);
+  }
+  
+   .con::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #87ceeb;
+    left: -5%;
+    bottom: 0;
+    transform: skewX(-19deg);
+    transition: 0.3s linear;
+    z-index: -1;
+  }
+  
+  .con:hover::after {
+    width: 110%;
+  }
+  .multiple-text{
+    position: fixed;
+  }
+
   /* Socials*/
-    .socials{
+  .socials{
     display: flex;
     gap: 10%;
     width: 220px;
@@ -290,71 +371,8 @@ section {
     align-items: center;
     justify-content: center;
     
-}
-  .con  {
-    text-decoration: none;
-    color:var(--black-color) ;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border: 2px solid #87ceeb;
-    padding: 7px 25px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    transition: 0.2s ease-in;
-    top: 30%;
-  }
-  .con i{
-    vertical-align: middle;
-  }
-  .con:hover {
-    color: var(--black-color);
-  }
-  
-   .con::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background-color: #87ceeb;
-    left: -5%;
-    bottom: 0;
-    transform: skewX(-19deg);
-    transition: 0.3s linear;
-    z-index: -1;
-  }
-  
-  .con:hover::after {
-    width: 110%;
-  }
-  .multiple-text{
-    position: fixed;
-  }
-  
-  .hi {
-    position: relative;
-  }
-  .hi::after {
-    content: "<Davistheweb>";
-    position: absolute;
-    top: -4rem;
-    left: -1rem;
-    color: #808080;
-    font-family: "La Belle Aurore", cursive;
-    font-size: 18px;
-  }
-  
-  .hi::before {
-    content: "<Davistheweb>";
-    position: absolute;
-    bottom: -11.2rem;
-    right: 0.2rem;
-    color: #808080;
-    font-family: "La Belle Aurore", cursive;
-    font-size: 18px;
-  }
-
+}  
+ 
   .hero-img{
     padding: 0 10% ;
     margin-left: 1%;
@@ -373,11 +391,12 @@ section {
 }
 .seprator{
     margin: 70px -60px 30px;
-    padding: .7rem;
-    background: rgba(255,255,255,0.08);
+    padding: .4rem;
+    font-family: var(--general-font);
     display: inline-block;
     color: var(--black-color);
-    border-radius: 20px;
+    font-size: 12px;
+    border-radius: 40px;
     border: 1px solid var(--black-color);
     cursor: pointer;
     
@@ -407,12 +426,20 @@ justify-content: start;
     font-size: 20px;
     
 }
+.about-info1 h1,
+.about-info1 span
+{
+    font-family: var(--general-font);
+    font-weight: var(--font-bolder);
+}
 .about-info1 h1 span{
     text-decoration: 5px underline #87ceeb;
 }
 .about .info p{
     color: var(--black-color);
-    font-size: 20px;
+    font-size: 17px;
+    font-family: var(--general-font);
+    font-weight: var(--font-medium); 
     width: 90%;
     
 }
@@ -427,12 +454,14 @@ justify-content: start;
 .about .info button i{
     vertical-align: middle;
 }
-.hire-btn{
+.download-btn{
     top: 5%;
     background: var(--main-color);
     padding:1%;
     border: none;
-    color: #333;
+    color: var(--text-color);
+    font-family: var(--general-font);
+    font-weight: var(--font-regular);
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
@@ -610,6 +639,7 @@ justify-content: start;
 #react  {
     color: #87ceeb;
 }
+
 .coding .item-d{
     margin-top: 30px;
     display: flex;
@@ -1386,7 +1416,9 @@ footer .youtube-link{
         display: none;
     }
   
-
+    .home{
+        flex-direction: column-reverse;
+    }
     .hero-img{
         margin-bottom: -55rem;
         position: absolute;
@@ -1404,15 +1436,13 @@ footer .youtube-link{
     font-size: 6rem;
     
 }
- .container-home{
-    margin-bottom: 0px;
-}
+
 .seprator{
     margin-left: 5px;
     
 }
     .container-home{
-        flex-direction: block;
+        
         height: 100%;
     }
     .about .info p{
@@ -1420,7 +1450,7 @@ footer .youtube-link{
         font-size: 25px;
         width: 100%;
     }
-    .about .hire-btn{
+    .about .download-btn{
         height: 70px;
     }
         .guarantee{
@@ -1574,6 +1604,9 @@ footer .youtube-link{
     .hero-img img{
     width: 220%;
 }
+.home{
+    grid-gap: 0;
+}
 }
 @media screen and (max-width:600px){
     .hi::after{
@@ -1583,11 +1616,15 @@ footer .youtube-link{
         top: 15vh;
     }
     .hero-img{
-        left: -1rem;
+        right: -30%;
+        width: auto;
         margin-bottom: -45rem;
+        
+        
     }
     .hero-img img{
-        width: 250px;
+        width: 250%;
+        flex-basis: 30%;
         
     }
     .con{
@@ -1661,7 +1698,9 @@ footer .youtube-link{
         font-size: 12px;
     }
     .con-btn{
-        font-size: 10px;
+        font-size: 15px;
+        width: 25vh;
+        height: 10vh;
     }
     .dav-img{
         align-content: center;
@@ -1749,14 +1788,9 @@ footer .youtube-link{
     .navlist{
         width: 230px;
     }   
-    .hero-img{
-        display: none;
-    }
+    
 }
 @media screen and(max-width:320px){
-    .hero-img{
-        display: none;
-    }
     .card__data {
         padding: 1rem;
       }
