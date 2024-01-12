@@ -39,7 +39,7 @@
     --font-bold:500;
     --font-regular:400;
     --font-medium:300;
-    --font-small:100;
+    --font-small:200;
 
 }
 .dark-theme{
@@ -521,11 +521,15 @@ justify-content: start;
 .guarantee .item .info h3{
     color: var(--black-color);
     font-size: 28px;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 .guarantee .item .info p{
     color: var(--black-color);
     font-size: 15px;
-    font-weight: 600;
+    font-family: var(--general-font);
+    font-weight: var(--font-medium);
+
 }
 
 .guarantee .item > i{
@@ -550,13 +554,20 @@ justify-content: start;
     font-size: 30px;
     margin-bottom: 20px;
 }
+.skills .left .info h3,
+.skills .left .info span{
+    font-family: var(--general-font);
+    font-weight: var(--font-bolder);
+}
 .skills .left .info h3 span{
     text-decoration: 5px underline  var(--main-color);
 }
 .skills .left .info p{
     color: var(--black-color);
     font-size: 19px;
-    width: 70%;
+    font-family: var(--general-font);
+    font-weight: var(--font-medium);
+    width: 90%;
 }
 
 .coding{
@@ -569,15 +580,17 @@ justify-content: start;
 }
 .tool{
     color: var(--black-color);
-    font-weight: 900;
-    font-size: 35px;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
+    font-size: 30px;
     margin-top: 20px;
     margin-left: -35px;
     margin-bottom: 30px; 
 }
 .tool span{
     text-decoration: underline #87ceeb;
-    
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 
 .coding .item-l{
@@ -604,6 +617,8 @@ justify-content: start;
     font-size: 15px;
     text-transform: uppercase;
     margin-top: 10px;
+    font-family: var(--general-font);
+    font-weight: var(--font-regular);
     
 }
 .coding .item i{
@@ -661,16 +676,22 @@ justify-content: start;
 /* Project style */
 .project-info h3{
     color: var(--black-color);
+    font-family: var(--general-font);
+    font-weight: var(--font-bolder);
     font-size: 30px;
     margin-bottom: 20px;
 }
 .project-info h3 span{
     text-decoration: 5px underline  var(--main-color);
+    font-family: var(--general-font);
+    font-weight: var(--font-bolder);
 }
 .project-info p{
     color: var(--black-color);
     font-size: 19px;
-    width: 70%;
+    font-family: var(--general-font);
+    font-weight: var(--font-regular);
+    width: 90%;
 }
 a {
     text-decoration: none;
@@ -712,7 +733,15 @@ a {
     position: relative;
     z-index: 10;
   }
-  
+  .card__data h3,p,.card__button{
+    font-family: var(--general-font);
+  }
+  .card__data h3{
+    font-weight: var(--font-bolder);
+  }
+  .card__description {
+    font-weight: var(--font-small);
+  }
   .card__img {
     width: 250px;
     margin: 0 auto;
@@ -838,7 +867,8 @@ a {
 .cText h2{
     color: var(--black-color);
     text-transform: uppercase;
-    font-weight:900;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 .contact-i{
         width: 100%;
@@ -871,7 +901,8 @@ a {
     border-radius: 7px;
     font-size: 15px;
     color: var(--black-color);
-    font-weight: 900;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 .contact-i form input::placeholder,
 .contact-i form textarea::placeholder
@@ -879,6 +910,8 @@ a {
     color: var(--black-color);
     font-size: 12px;
     left: 5px;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 
 
@@ -896,6 +929,8 @@ a {
     overflow: hidden;
     transition: 0.29s ease-in;
     margin-left: 7px;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
     
 }
 .con-btn i{
@@ -933,12 +968,15 @@ textarea{
     padding: 1.5rem;
     display: inline-block;
     cursor: pointer;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 .icon-name2{
     color: var(--black-color);
     width: 70%;
     font-size: 12px;
-    font-weight: 600;
+    font-family: var(--general-font);
+    font-weight: var(--font-medium);
     margin: -30px -10px 10px;
     padding: 1.5rem;
     display: inline-block;
@@ -1010,7 +1048,8 @@ padding: 1%;
 border-radius: 10px;
 cursor: pointer;
 font-size: 17px;
-font-weight: 600;
+font-family: var(--general-font);
+font-weight: var(--font-bold);
 color: #fff;  
 display: inline-block;
 margin-left: 35px;
@@ -1066,22 +1105,29 @@ footer{
     left: 35%;
 }
 .ft-start h3{
-    font-weight: 600;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
     margin-bottom: 25px;
 }
 .ft-start h3 span{
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
     text-decoration:2px underline;
     color: #fff;
 }
 .ft-start p{
     font-size: 15px;
+    font-family: var(--general-font);
+    font-weight: var(--font-regular);
     width: 30%;
     margin-bottom: 10px;
 }
 .contact-me{
     background-color: #333;
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
+    font-family: var(--general-font);
+    font-weight: var(--font-regular);
     border: 1px solid #333;
     padding: 15px 25px;
     border-radius: 10px;
@@ -1108,15 +1154,19 @@ footer .abt-ft-clo .ft-name p{
     margin-left: 30px;
     font-size: 25px;
     font-weight: 600;
+    font-weight: var(--font-bold);
+    font-family: var(--general-font);
 }
 footer .abt-ft-clo .ft-name p i{
     vertical-align: middle;
 }
 footer .abt-ft-clo .ft-name2 p{
+    font-weight: var(--font-medium);
+    font-family: var(--general-font);
     color: var(--black-color);
     margin-left: 30px;
     font-size: 15px;
-    width: 50%;
+    width: 55%;
 }
 footer .abt-ft-clo .linkcol1{
     flex: 3;
@@ -1124,10 +1174,13 @@ footer .abt-ft-clo .linkcol1{
 footer .linkcol1{
     margin-top: 40px;
     display: block;
+    font-weight: var(--font-regular);
+    font-family: var(--general-font);
 }
 footer .linkcol1 a{
     color: var(--black-color);
-    
+    font-family: var(--general-font);
+    font-weight: var(--font-medium);
     display: block;
     text-decoration: 2px underline var(--main-color);
     font-size: 20px;
@@ -1179,6 +1232,7 @@ footer .youtube{
    flex: 4;
    position: relative;
    display: block;
+   margin-top: -2%;
 }
  .youtube-head{
     color: var(--white-color);
@@ -1186,9 +1240,13 @@ footer .youtube{
     margin-top: -7%;
     font-size: 17px;
     position: absolute;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 footer .youtube-description{
     color:var(--white-color);
+    font-family: var(--general-font);
+    font-weight: var(--font-medium);
     margin-left: 70%;
     margin-top:-4%;
     position: absolute;
@@ -1200,6 +1258,8 @@ footer .youtube-link{
     margin-top: -1%;
     text-decoration: none;
     font-size: 20px;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
     color: #fff;
     background-color: #000;
     padding: .9rem;
@@ -1222,13 +1282,18 @@ footer .youtube-link:hover{
 .footer-end p{
     color: var(--black-color);
     padding-bottom: -4%;
+    font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 .footer-end a{
-    color: #87ceeb;
+    color: var(--main-color);
+   
    
 }
 .footer-end a span{
-    text-decoration: 5px underline #87ceed;
+    text-decoration: 5px underline var(--main-color);
+     font-family: var(--general-font);
+    font-weight: var(--font-bold);
 }
 .scroll-btn {
     position: fixed;
