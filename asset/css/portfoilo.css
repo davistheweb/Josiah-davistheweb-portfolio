@@ -118,7 +118,7 @@ ul.navlist{
 .navlist li a{
     position: relative;
     display: inline-flex;
-    font-weight: var(--font-bolder);
+    font-weight: var(--font-bold);
     font-family: var(--general-font);
     color: var(--black-color);
     padding: 0 10px;
@@ -468,7 +468,7 @@ justify-content: start;
     transition: all 0.3s ease;
 }
 
-.hire-btn:hover{
+.download-btn:hover{
     
     box-shadow: var(--hover-box-shadow);
 }
