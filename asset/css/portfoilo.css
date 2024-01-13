@@ -10,7 +10,7 @@
 
 
 ::-webkit-scrollbar-thumb
-{   overflow-y:scroll;
+{   overflow:hidden;
     background: var(--main-color);
     border-radius: 5px;
 }
@@ -729,12 +729,7 @@ a {
     position: relative;
     z-index: 10;
   }
-  .card__data h3,p,.card__button{
-    font-family: var(--general-font);
-  }
-  .card__data h3{
-    font-weight: var(--font-bolder);
-  }
+ 
   .card__description {
     font-weight: var(--font-small);
   }
@@ -750,24 +745,29 @@ a {
   
  
   .card__name {
-    font-size: var(--h2-font-size);
+    font-weight: var(--font-regular);
+    font-family: var(--general-font);
+    font-size: 15px;
     color: var(--black-color);
     margin-bottom: .75rem;
   }
   
   .card__description {
-    font-weight: 500;
     margin-bottom: 1.75rem;
+    font-size: 12px;
+    font-weight: var(--font-small);
+    font-family: var(--general-font);
     color: var(--black-color);
   }
   
   .card__button {
     display: inline-block;
+    font-family: var(--general-font);
+    font-weight: var(--font-regular);
     background-color: var(--main-color);
     padding: .75rem 1.5rem;
     border-radius: .35rem;
     color: var(--black-color);
-    font-weight: bolder;
     transition: all 0.5s ease;
   }
   .card__button:hover{
