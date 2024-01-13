@@ -1672,9 +1672,10 @@ footer .youtube-link{
 @media screen and (max-width:600px){
     .hi::after{
         left: 0%;
+        
     }
     .hi::before{
-        top: 15vh;
+        top: 20vh;
     }
     .hero-img{
         right: -30%;
@@ -1819,17 +1820,16 @@ footer .youtube-link{
     
 }
 @media screen and (max-width:480px){
+    .hi::after{
+        font-size: 15px;
+    }
     .hi::before{
-        font-size: 20px;
+        font-size: 15px;
         bottom: -10rem;
         left: 15rem;
     }
     .about img{
         display: none;
-    }
-    .hi::after{
-
-        font-size: 20px;
     }
     .home-detail h3{
         font-size: 2.5rem;
