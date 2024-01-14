@@ -10,7 +10,7 @@
 
 
 ::-webkit-scrollbar-thumb
-{   overflow-y:scroll;
+{   overflow:hidden;
     background: var(--main-color);
     border-radius: 5px;
 }
@@ -59,14 +59,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'PT', Serif;
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
 }
     /*body*/
 body{
-    
     height: 100vh;
     background-color: var(--bg-color);
     color: var(--black-color);
@@ -246,7 +244,6 @@ section {
     top: -4rem;
     left: -1rem;
     color: #808080;
-    font-family: "La Belle Aurore", cursive;
     font-size: 18px;
   }
   
@@ -256,7 +253,6 @@ section {
     bottom: -11.2rem;
     right: 0.2rem;
     color: #808080;
-    font-family: "La Belle Aurore", cursive;
     font-size: 18px;
   }
  
@@ -648,7 +644,7 @@ justify-content: start;
     color: #5097b3;
 }
 #bootstrap{
-    color: #563c7a;
+    color: #8846e4;
 }
 
 #react  {
@@ -733,12 +729,7 @@ a {
     position: relative;
     z-index: 10;
   }
-  .card__data h3,p,.card__button{
-    font-family: var(--general-font);
-  }
-  .card__data h3{
-    font-weight: var(--font-bolder);
-  }
+ 
   .card__description {
     font-weight: var(--font-small);
   }
@@ -754,24 +745,29 @@ a {
   
  
   .card__name {
-    font-size: var(--h2-font-size);
+    font-weight: var(--font-regular);
+    font-family: var(--general-font);
+    font-size: 15px;
     color: var(--black-color);
     margin-bottom: .75rem;
   }
   
   .card__description {
-    font-weight: 500;
     margin-bottom: 1.75rem;
+    font-size: 12px;
+    font-weight: var(--font-small);
+    font-family: var(--general-font);
     color: var(--black-color);
   }
   
   .card__button {
     display: inline-block;
+    font-family: var(--general-font);
+    font-weight: var(--font-regular);
     background-color: var(--main-color);
     padding: .75rem 1.5rem;
     border-radius: .35rem;
     color: var(--black-color);
-    font-weight: bolder;
     transition: all 0.5s ease;
   }
   .card__button:hover{
@@ -1297,7 +1293,7 @@ footer .youtube-link:hover{
 }
 .scroll-btn {
     position: fixed;
-    right: 1rem;
+    right:1rem;
     bottom: -50%;
     background: var(--main-color);
     display: inline-flex;
@@ -1676,20 +1672,20 @@ footer .youtube-link{
 @media screen and (max-width:600px){
     .hi::after{
         left: 0%;
+        
     }
     .hi::before{
-        top: 15vh;
+        top: 20vh;
     }
     .hero-img{
         right: -30%;
         width: auto;
         margin-bottom: -45rem;
-        
+        flex-basis: 1/2;
         
     }
     .hero-img img{
         width: 250%;
-        flex-basis: 30%;
         
     }
     .con{
@@ -1824,17 +1820,16 @@ footer .youtube-link{
     
 }
 @media screen and (max-width:480px){
+    .hi::after{
+        font-size: 15px;
+    }
     .hi::before{
-        font-size: 20px;
+        font-size: 15px;
         bottom: -10rem;
         left: 15rem;
     }
     .about img{
         display: none;
-    }
-    .hi::after{
-
-        font-size: 20px;
     }
     .home-detail h3{
         font-size: 2.5rem;

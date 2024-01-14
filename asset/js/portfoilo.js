@@ -160,19 +160,15 @@ let swiperCards = new Swiper(".card__content", {
 // scroll reveal
 
 ScrollReveal({ 
-  distance:"90px",
+  origin:'top',
+  distance:'60px',
   duration:2000,
   delay:200,
-  reset: true ,
+  reset:true,
 });
 
 
-ScrollReveal().reveal('.home-detail,.coding,.container,.contact-i', { origin: "top" });
-ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
-ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
-ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero', { origin: "bottom" });
-
-
-window.onload = function() {
-  window.resizeTo(800, 600); // Replace with your desired width and height
-};
+ScrollReveal().reveal('.home-detail,.tool, .about-info1, .contact-i, .linkcol1', { origin: 'top'});
+ScrollReveal().reveal('.about-img,.contact-i, .icon, .item-f, .seprator, .about-img, .abt-ft-clo', { origin: 'left' });
+ScrollReveal().reveal('.hero-img, .skills, .item-l, .item-d, .info, .port-2, .con-btn, .dav-img, .ft-start, .fottersocials', { origin: 'right'});
+ScrollReveal().reveal('.abt-name, .port-1, .container, .end, .youtube', { origin: 'bottom' });
