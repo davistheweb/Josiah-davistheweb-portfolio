@@ -241,22 +241,22 @@ section {
     position: relative;
   }
   .hi::after {
-    content: "<Davistheweb>";
+    content: "<davistheweb>";
     position: absolute;
     top: -4rem;
     left: -1rem;
     color: #808080;
-    font-family: "La Belle Aurore", cursive;
+    font-family: var(--general-font);
     font-size: 18px;
   }
   
   .hi::before {
-    content: "<Davistheweb>";
+    content: "<davistheweb>";
     position: absolute;
     bottom: -11.2rem;
     right: 0.2rem;
     color: #808080;
-    font-family: "La Belle Aurore", cursive;
+    font-family: var(--general-font);
     font-size: 18px;
   }
  
@@ -1679,7 +1679,7 @@ footer .youtube-link{
         left: 0%;
     }
     .hi::before{
-        top: 15vh;
+        top: 21vh;
     }
     .hero-img{
         right: -30%;
@@ -1826,8 +1826,7 @@ footer .youtube-link{
 }
 @media screen and (max-width:480px){
     .hi::before{
-        font-size: 20px;
-        bottom: -10rem;
+        font-size: 12px;
         left: 15rem;
     }
     .about img{
@@ -1835,7 +1834,7 @@ footer .youtube-link{
     }
     .hi::after{
 
-        font-size: 20px;
+        font-size: 12px;
     }
     .home-detail h3{
         font-size: 2.5rem;
