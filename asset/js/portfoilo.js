@@ -164,11 +164,10 @@ ScrollReveal({
   distance:'60px',
   duration:2000,
   delay:200,
-  reset:true,
 });
 
 
-ScrollReveal().reveal('.home-detail,.tool, .about-info1, .contact-i, .linkcol1', { origin: 'top'});
+ScrollReveal().reveal('.home-detail,.tool, .about-info1, .contact-i, .linkcol1,  #dirct', { origin: 'top'});
 ScrollReveal().reveal('.about-img,.contact-i, .icon, .item-f, .seprator, .about-img, .abt-ft-clo', { origin: 'left' });
 ScrollReveal().reveal('.hero-img, .skills, .item-l, .item-d, .info, .port-2, .con-btn, .dav-img, .ft-start, .fottersocials', { origin: 'right'});
 ScrollReveal().reveal('.abt-name, .port-1, .container, .end, .youtube', { origin: 'bottom' });

@@ -1548,9 +1548,7 @@ footer .youtube-link{
         width: 100%;
         font-size: 22px;
     }
-   #contact{
-    margin-top: -40%;
-   }
+   
     .contact-i{
         width: 80%;
         margin-left: -2px;
@@ -1599,13 +1597,8 @@ footer .youtube-link{
         display: none;
     }
     footer .youtube{
-        margin-top: -15%;
+        margin-top: -21%;
         right: 5%;
-    }
-
-
-    footer{
-        margin-top: -10%;
     }
 }
 @media screen and (max-width:768px){
