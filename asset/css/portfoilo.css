@@ -164,6 +164,9 @@ ul.navlist{
 .navlist .resp {
     display: none;
 }
+.navmenu{
+    display: none;
+}
 .dark-toogle{
     display: block;
     margin-left:-46px;
@@ -922,7 +925,7 @@ a {
     border-radius:1rem;
     cursor: pointer;
     border: none;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 900;
     color: #fff;  
     border: 1px solid #87ceeb;
@@ -1116,7 +1119,7 @@ footer{
     color: #fff;
 }
 .ft-start p{
-    font-size: 15px;
+    font-size: 14px;
     font-family: var(--general-font);
     font-weight: var(--font-regular);
     width: 30%;
@@ -1229,7 +1232,6 @@ footer .linkcol1 a{
 }
 
 footer .youtube{
-   flex: 4;
    position: relative;
    display: block;
    margin-top: -2%;
@@ -1263,7 +1265,7 @@ footer .youtube-link{
     font-weight: var(--font-bold);
     color: #fff;
     background-color: #000;
-    padding: .9rem;
+    padding: .7rem;
     border-radius: 3px;
 }
 footer .youtube-link i{
@@ -1600,6 +1602,50 @@ footer .youtube-link{
     }
 }
 @media screen and (max-width:768px){
+
+    ul.navlist{
+        display: none;
+    }
+    .navmenu{
+       position: absolute;
+       top: -100vh;
+        left: 0;
+        width: 100vh;
+        background-color: var(--res-dec);
+        display: flex;
+        transition: all 1s ease;
+        border-radius: 10px;
+    }
+ 
+    .navmenu a{ 
+        color: var(--black-color);
+        z-index: 1;
+        margin: 6vh 4.7vh;
+        font-size: 20px;
+        font-family: var(--general-font);
+    }
+    .navmenu .resp{
+        display: block;
+        font-size: 15px;
+        position: absolute;
+        align-items: start;
+        justify-content: center;
+        margin-left: 10%;
+    }
+   
+    .navmenu li a {
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    text-decoration: none;
+    }
+    .navmenu li a i{
+    margin-bottom: 5px;
+    }
+    .navmenu.open{
+        top: 3%;
+    }
     .hi::before{
         top: 30vh;
     }
@@ -1623,41 +1669,7 @@ footer .youtube-link{
         margin-right: 15%;
         font-size: 24px;
     }
-    .navlist .resp{
-        display: block;
-        font-size: 15px;
-        position: absolute;
-        align-items: start;
-        justify-content: center;
-        margin-left: 10%;
-    }
-    .navlist{
-        position: absolute;
-        top: .0%;
-        right: -100%;
-        width: 270px;
-        height: 100vh;
-        background-color: var(--res-dec);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        transition: all 1s ease;
-        border-radius: 10px;
-    }
- 
-    .navlist a{
-        color: white;
-        padding: 0;
-        z-index: 1;
-        margin: 5vh 20%;
-        
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-    .navlist.open{
-        right: 2%;
-    }
+   
     .hero-img img{
     width: 220%;
 }
@@ -1690,9 +1702,12 @@ footer .youtube-link{
     .home-detail h3{
         font-size: 3rem;
     }
-    .navlist{
-        width: 250px;
+    
+    .navmenu a{
+        font-size: 15px;
+        margin: 10vh 2.3vh;
     }
+
     .seprator{
         margin-left: 15px;
     }
@@ -1816,6 +1831,8 @@ footer .youtube-link{
     
 }
 @media screen and (max-width:480px){
+
+   
     .hi::before{
         font-size: 12px;
         left: 15rem;
@@ -1841,12 +1858,15 @@ footer .youtube-link{
         font-size: 20px;
     }
    
-    .navlist{
-        width: 230px;
-    }   
-    
+  
 }
 @media screen and(max-width:320px){
+
+    .navmenu a{
+        font-size: 2px;
+        margin: 10vh 5vh;
+    }
+
     .card__data {
         padding: 1rem;
       }

@@ -1,16 +1,16 @@
 //hamburger
 const menu = document.querySelector("#menu-bar");
-const navlist = document.querySelector(".navlist");
-const navLinks = document.querySelectorAll(".navlist a"); // Get all links within navlist
+const navMenu = document.querySelector(".navmenu");
+const navMenus = document.querySelectorAll(".navmenu a"); // Get all links within navlist
 
 menu.addEventListener("click", () => {
   menu.classList.toggle("bx-x");
-  navlist.classList.toggle("open");
+  navMenu.classList.toggle("open");
 });
 
-navLinks.forEach(link => {
+navMenus.forEach(link => {
   link.addEventListener("click", () => {
-    navlist.classList.remove("open"); // Close the navbar
+    navMenu.classList.remove("open"); // Close the navbar
     menu.classList.remove("bx-x"); // Optionally remove the toggle icon's class
   });
 });
