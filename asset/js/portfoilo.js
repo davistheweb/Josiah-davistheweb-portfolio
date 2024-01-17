@@ -70,7 +70,27 @@ window.onscroll = () => {
 	};
 	});
 };
+// active menu for mobile devices
 
+const sectionS = document.querySelectorAll('section');
+const navMenuS = document.querySelectorAll('header .navmenu a');
+
+window.onscroll = () => {
+	sectionS.forEach(sec => {
+		const top = window.scrollY;
+		const offset = sec.offsetTop;
+		const height = sec.offsetHeight;
+		const id = sec.getAttribute('id');
+
+		if(top >= offset && top < offset + height) {
+			navMenuS.forEach(links => {
+				links.classList.remove('active');
+				document.querySelector('header .navmenu a[href*=' + id + ']').classList.add('active');
+			});
+		
+	};
+	});
+};
 /*SHOW SCROLL UP*/
 function scrollTop() {
   const scrollUp = document.getElementById('scroll-up');
@@ -169,5 +189,5 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-detail,.tool, .about-info1, .contact-i, .linkcol1,  #dirct', { origin: 'top'});
 ScrollReveal().reveal('.about-img,.contact-i, .icon, .item-f, .seprator, .about-img, .abt-ft-clo', { origin: 'left' });
-ScrollReveal().reveal('.hero-img, .skills, .item-l, .item-d, .info, .port-2, .con-btn, .dav-img, .ft-start, .fottersocials', { origin: 'right'});
+ScrollReveal().reveal('.skills, .item-l, .item-d, .info, .port-2, .con-btn, .dav-img, .ft-start, .fottersocials', { origin: 'right'});
 ScrollReveal().reveal('.abt-name, .port-1, .container, .end, .youtube', { origin: 'bottom' });

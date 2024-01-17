@@ -73,6 +73,9 @@ body{
     transition: all 0.8s ease;
     
 }
+.main{
+    overflow: hidden;
+}
 .demac-head{
     margin-left: 2%;
     display: flex;
@@ -1404,6 +1407,7 @@ html,body{
     height: 100%;
     padding: 0;
     margin: 0; 
+   
 }
 
 .hero-img{
@@ -1611,38 +1615,66 @@ footer .youtube-link{
        top: -100vh;
         left: 0;
         width: 100vh;
+        height: 40vh;
         background-color: var(--res-dec);
+        font-weight: var(--font-bolder);
         display: flex;
+      gap: 8rem;
+        flex-wrap: wrap;
         transition: all 1s ease;
         border-radius: 10px;
+    
     }
- 
+
+ .wrap{
+    display: flex;
+    gap: 5.5rem;
+    margin-top: -12rem;
+    
+ }
     .navmenu a{ 
         color: var(--black-color);
         z-index: 1;
-        margin: 6vh 4.7vh;
-        font-size: 20px;
+        font-size: 25px;
         font-family: var(--general-font);
+        
     }
+    
     .navmenu .resp{
         display: block;
-        font-size: 15px;
+        font-size: 25px;
         position: absolute;
-        align-items: start;
+        font-weight: var(--font-medium);
         justify-content: center;
-        margin-left: 10%;
+        margin-left: 55vh;
+        margin-top: 12vh;
     }
-   
-    .navmenu li a {
+   .navmenu .resp i{
+    font-size: 20px;
+   }
+    .resp:hover{
+        position: absolute;
+        color: var(--black-color);
+        box-shadow: var(--hover-box-shadow);
+    }
+    .navmenu li a{
     align-items: center;
     justify-items: center;
-    display: flex;
+    display:flex;
+    margin: 9vh 5vh;
     flex-direction: column-reverse;
     text-decoration: none;
     }
-    .navmenu li a i{
-    margin-bottom: 5px;
+  
+    .navmenu i{
+    font-size: 35px;
     }
+    .navmenu li a:hover,
+    .navmenu li a.active{
+        color: var(--main-color);
+        
+    }
+    
     .navmenu.open{
         top: 3%;
     }
@@ -1678,6 +1710,8 @@ footer .youtube-link{
 }
 }
 @media screen and (max-width:600px){
+
+    
     .hi::after{
         left: 0%;
     }
@@ -1702,12 +1736,36 @@ footer .youtube-link{
     .home-detail h3{
         font-size: 3rem;
     }
-    
-    .navmenu a{
-        font-size: 15px;
-        margin: 10vh 2.3vh;
+   
+    .wrap{
+        left: -1%;
+        gap: 3rem;
+        margin-top: 7rem;
+        position: absolute;
+      
     }
-
+    .navmenu .resp{
+        width: 45%;
+      font-size: 15px;
+        margin-left: 35vh;
+        margin-top: 11vh;
+    }
+    .navmenu{
+    gap: 7vh;
+        height: 35vh;
+    }
+    .navmenu li a{
+        margin: 9vh 3vh;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .navmenu i{
+        font-size: 20px;
+    }
+    .navmenu a{
+        font-size: 16px;
+    }
     .seprator{
         margin-left: 15px;
     }
@@ -1854,13 +1912,11 @@ footer .youtube-link{
     .multiple-text{
         font-size: 13px;
     }
-    .resp{
-        font-size: 20px;
-    }
+   
    
   
 }
-@media screen and(max-width:320px){
+@media screen and(max-width:380px){
 
     .navmenu a{
         font-size: 2px;
