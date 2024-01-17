@@ -75,6 +75,8 @@ body{
 }
 .main{
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 .demac-head{
     margin-left: 2%;
@@ -192,7 +194,7 @@ ul.navlist{
 
 section {
     
-    padding: 0 8%;
+    padding:0 8%;
   }
   /* Introduction */
   .home {
@@ -200,9 +202,9 @@ section {
     height: 100%;
     width: 100%;
     position: relative;
-    grid-template-columns: repeat(2,1fr);
     align-items: center;
-    grid-gap: 4rem;
+    row-gap: 2rem;
+    
   }
   .scroll-down {
     position: absolute;
@@ -267,8 +269,8 @@ section {
   }
  
   .home-detail h3 {
-    font-size: 4.5rem;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight:var(--font-bold);
     font-family: var(--general-font);
     color: var(--black-color);
     
@@ -390,7 +392,7 @@ section {
   .hero-img img{
     padding: 0 15%;
     position: fixed;
-    width: 400px;
+    width: 60vh;
     height: auto;
     z-index: 10;
     
@@ -411,6 +413,7 @@ section {
 .seprator i{
     vertical-align: middle;
 }
+
 .about{
     color: var(--black-color);
     display: flex;
@@ -424,7 +427,7 @@ section {
 margin-top: 20px;
 align-items: start;
 justify-content: start;
-    width: 100px;
+  
 }
 .about-info1{
     color: var(--black-color);
@@ -632,6 +635,9 @@ justify-content: start;
 
     
 }
+.coding svg{
+  width: 90px;
+}
 #html   {
     color: #ff7300;
 }
@@ -756,8 +762,11 @@ a {
       border-radius: 10px;
   display: flex;
     height: 180px;
+    transition: all 0.5s ease;
   }
-  
+  .card__img:hover{
+    transform: scale(1.1);
+  }
  
   .card__name {
     font-size: var(--h2-font-size);
@@ -770,7 +779,7 @@ a {
     margin-bottom: 1.75rem;
     color: var(--black-color);
   }
-  
+
   .card__button {
     display: inline-block;
     background-color: var(--main-color);
@@ -779,22 +788,25 @@ a {
     color: var(--black-color);
     font-weight: bolder;
     transition: all 0.5s ease;
-  }
-  .card__button:hover{
+}
+
+.card__button:hover {
     background-color: var(--black-color);
     color: var(--main-color);
     box-shadow: var(--hover-box-shadow);
-    
-  }
-  .card__button i{
+    transition: all 0.5s ease-in;
+}
+
+.card__button i {
     vertical-align: middle;
-  }
-  .card__button:hover{
-    position: relative;
-    display: inline-block;
-    transform:translateX(.5rem);
-  }
-  
+    transition: transform 0.5s ease; 
+}
+
+.card__button:hover i {
+    transform: translateX(0.5rem); 
+}
+
+
   /* Swiper class */
   .swiper-button-prev:after,
   .swiper-button-next:after {
@@ -949,9 +961,12 @@ a {
     transition: 0.8s ease-in;
 
 }
-
+.con-btn:hover i{
+    transform: translateX(0.5rem);
+    transition: 0.8s ease-in;
+}
 textarea{
-    resize: none;
+   resize: none;
 }
 /* contact/img style*/
 .dav-img img{
@@ -1313,7 +1328,7 @@ footer .youtube-link:hover{
     z-index: 100;
     border-radius: .25rem;
     box-shadow: 0 4px 16px hsla(0, 0%, 0%, .1);
-    transition: bottom .4s, transform .4s, background .4s;
+    transition: bottom .8s, transform .8s, background .8s;
 
 }
 
@@ -1455,7 +1470,7 @@ footer .ft-clo .fottersocials{
     margin-left: 3%;
 }
 footer .youtube{
-    margin-top: -10%;
+    margin-top: -18vh;
     right: 5%;
 }
  footer .youtube-head{
@@ -1468,7 +1483,10 @@ footer .youtube-description{
 footer .youtube-link{
     margin-top: 5%;
 }
+
 .footer-end{
+    margin-top: 25vh;
+    padding-bottom: 20px;
     font-size: 15px;
 }
 
@@ -1579,7 +1597,7 @@ footer .youtube-link{
         font-size: 17px;
     }
     .con-btn{
-        font-size: 16px;
+        font-size: 12px;
     }
     .dav-img{
         align-items: end;
@@ -1604,6 +1622,18 @@ footer .youtube-link{
         margin-top: -21%;
         right: 5%;
     }
+  footer .youtube .youtube-head{
+        margin-right: -10vh;
+        width: 45%;
+        font-size: 13px;
+        margin-top: -2.5vh;
+        transform: translateY(auto);
+    }
+    footer .youtube .youtube-description{
+        margin-top: -1%;
+        width: 35%;
+    }
+
 }
 @media screen and (max-width:768px){
 
@@ -1619,7 +1649,7 @@ footer .youtube-link{
         background-color: var(--res-dec);
         font-weight: var(--font-bolder);
         display: flex;
-      gap: 8rem;
+        gap: 8rem;
         flex-wrap: wrap;
         transition: all 1s ease;
         border-radius: 10px;
@@ -1726,8 +1756,8 @@ footer .youtube-link{
         
     }
     .hero-img img{
-        width: 250%;
-        flex-basis: 30%;
+        width: 370%;
+        
         
     }
     .con{
@@ -1770,14 +1800,14 @@ footer .youtube-link{
         margin-left: 15px;
     }
     .about-info1{
-        font-size: 19px;
+        font-size: 15px;
     }
     .about .info p{
         font-size: 15px;
     }
    
     .skills .left .info h3{
-        font-size: 19px;
+        font-size: 25px;
     }
     .skills .left .info p{
         font-size: 15px;
@@ -1799,9 +1829,14 @@ footer .youtube-link{
         flex-wrap: wrap;
         gap: 12px;
     }
+
+    .project-info p{
+        font-size: 15px;
+    }
     .contact-info{
         flex-direction: column;
     }
+
     .contact-i{
         
         margin-left: -2px;
@@ -1837,6 +1872,9 @@ footer .youtube-link{
         justify-content: center;
         margin-right: 2px;
     }
+    footer{
+        margin-top: 25vh;
+    }
      .ft-start{
         top: -9%;
        flex-wrap: wrap;
@@ -1854,39 +1892,48 @@ footer .youtube-link{
    }
    footer .abt-ft-clo .ft-name p{
     font-size: 17px;
+    margin-top: 10vh;
    }
    footer .abt-ft-clo .ft-name2 p{
-    width: 110%;
+    width: 45vh;
    }
    footer .linkcol1{
     flex-basis: 100%;
-    margin-left: 7%;
+    margin-left: 8%;
    }
    footer .ft-clo .fottersocials{
     flex-basis: 60%;
+    margin-left: 8%;
    }
    footer .youtube{
-    margin-top: 10%;
-    right: 35vh;
+    margin-top: 15%;
+    right: 30vh;
+    margin-left: 5%;
    }
-  .youtube .youtube-head{
-    font-size: 15px;
-    right: -16rem;
+  footer .youtube .youtube-head{
+    font-size: 13px;
+    right: -12rem;
     width: 100%;
    }
-   .youtube .youtube-description{
-    width: 100%;
-    left:-5%;
+   footer .youtube .youtube-description{
+    width: 110vh;
+    margin-top:5px;
+    left:-2%;
    }
    .youtube .youtube-link{
     margin-top: 10%;
-    left: -5%;
+    left: -1%;
     width: 50%;
    }
    footer .footer-end p{
     padding-bottom: -115%;
    }
-    
+    .my-socials{
+        right: 15%;
+    }
+    .hire-me{
+    left: 2%;
+    }
 }
 @media screen and (max-width:480px){
 
@@ -1895,8 +1942,8 @@ footer .youtube-link{
         font-size: 12px;
         left: 15rem;
     }
-    .about img{
-        display: none;
+    .about{
+        flex-direction: column-reverse;
     }
     .hi::after{
 
@@ -1916,7 +1963,7 @@ footer .youtube-link{
    
   
 }
-@media screen and (max-width:375px){
+@media screen and (max-width:380px){
 
     .wrap{
         left: -1%;
@@ -1959,4 +2006,29 @@ footer .youtube-link{
           
           font-size: 30px;
       }
+      footer .abt-ft-clo .ft-name2 p{
+        width: 40vh;
+       }
+      .hire-me{
+        left: 4%;
+        }
+      footer .youtube .youtube-head{
+        font-size: 13px;
+        right: -10rem;
+        width: 100%;
+       }
+       footer .youtube .youtube-description{
+        width: 110vh;
+        margin-top:5px;
+        left:-7%;
+       }
+       .youtube .youtube-link{
+        margin-top: 15%;
+        left: -10.9%;
+        width: 55%;
+       }
+       footer .footer-end p{
+        padding-top: 10vh;
+        
+       }
 }
