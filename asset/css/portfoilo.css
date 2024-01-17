@@ -1739,7 +1739,7 @@ footer .youtube-link{
    
     .wrap{
         left: -1%;
-        gap: 3rem;
+        gap: 2.6rem;
         margin-top: 7rem;
         position: absolute;
       
@@ -1916,11 +1916,37 @@ footer .youtube-link{
    
   
 }
-@media screen and(max-width:380px){
+@media screen and (max-width:375px){
 
+    .wrap{
+        left: -1%;
+        gap: 2rem;
+        margin-top: 7rem;
+        position: absolute;
+      
+    }
+    .navmenu .resp{
+        width: 50%;
+      font-size: 14px;
+        margin-left: 35vh;
+        position: absolute;
+        margin-top: 12vh;
+    }
+    .navmenu .resp i{
+        font-size: 17px;
+    }
+    .navmenu{
+    gap: 6vh;
+       
+    }
+    .navmenu li a{
+        margin: 10vh 4vh;
+    }
+    .navmenu i{
+        font-size: 20px;
+    }
     .navmenu a{
-        font-size: 2px;
-        margin: 10vh 5vh;
+        font-size: 12px;
     }
 
     .card__data {
