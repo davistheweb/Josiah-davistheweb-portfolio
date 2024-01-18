@@ -466,7 +466,7 @@ justify-content: start;
 .download-btn{
     top: 5%;
     background: var(--main-color);
-    padding:1%;
+    padding:1rem;
     border: none;
     color: var(--text-color);
     font-family: var(--general-font);
@@ -486,7 +486,7 @@ justify-content: start;
     padding: 0 50px;
     display: flex;
     flex-wrap: nowrap;
-    gap: 1%;
+    gap:1%;
 }
 
 .guarantee .item{
@@ -517,10 +517,9 @@ justify-content: start;
 
 .guarantee .item .icon i{
     font-size: 30px;   
-}
-.icon i{
     vertical-align: middle;
 }
+
 .guarantee .item .info{
     display: flex;
     flex-direction: column;
@@ -1543,9 +1542,11 @@ footer .youtube-link{
     }
         .guarantee{
         flex-wrap: wrap;
+        
     }
     .guarantee .item{
         box-shadow: var(--hover-box-shadow);
+        flex-basis: 49%;
     }
     .skills{
         justify-content: space-between;
@@ -1725,19 +1726,24 @@ footer .youtube-link{
     .btn{
         display: none;
     }
-    
+    .guarantee .item{
+        flex-basis: 100%;
+    }
     .dark-toogle{
         position: absolute;
         margin-right: 15%;
         font-size: 24px;
     }
-   
+    .about{
+        flex-direction: column-reverse;
+    }
     .hero-img img{
     width: 220%;
 }
 .home{
     grid-gap: 0;
 }
+
 }
 @media screen and (max-width:600px){
 
@@ -1805,7 +1811,9 @@ footer .youtube-link{
     .about .info p{
         font-size: 15px;
     }
-   
+  .about .info .download-btn{
+    font-size: 15px;
+   }
     .skills .left .info h3{
         font-size: 25px;
     }
@@ -1936,15 +1944,21 @@ footer .youtube-link{
     }
 }
 @media screen and (max-width:480px){
-
-   
+    .guarantee .item{
+        margin-top: 20px;
+    }
+    .guarantee .item .info h3{
+        font-size: 20px;
+       }
+       .guarantee .item .info p{
+        font-size: 12px;
+        font-weight: var(--font-bolder);
+       }
     .hi::before{
         font-size: 12px;
         left: 15rem;
     }
-    .about{
-        flex-direction: column-reverse;
-    }
+   
     .hi::after{
 
         font-size: 12px;
@@ -1995,7 +2009,17 @@ footer .youtube-link{
     .navmenu a{
         font-size: 12px;
     }
+    .guarantee .item .icon i{
 
+        font-size: 25px;
+    }
+    .guarantee .item .info h3{
+        font-size: 17px;
+    }
+    .guarantee .item .info p{
+        font-size: 10.2px;
+        font-weight: var(--font-medium);
+       }
     .card__data {
         padding: 1rem;
       }
