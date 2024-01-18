@@ -21,7 +21,8 @@
     --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
     rgba(0,0,0,0.23)0px 6px 6px;     
     --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%); 
-    --main-color:#87ceeb;  
+    --main-color:#0ef;  
+    --skills-bg:#383d52;
     --text-color:#000;
     --black-color:#000;  
     --bg-color:#c6c6c6;          
@@ -131,7 +132,7 @@ ul.navlist{
 .navlist li a:after{
     content: "";
     position: absolute;
-    background-color: #87ceeb;
+    background-color: var(--main-color);
     height: 4px;
     width:0;
     left: 0;
@@ -280,9 +281,22 @@ section {
     letter-spacing: 2px;
     font-family: var(--general-font);
     font-weight: var(--font-medium);
+    opacity: 0;
     margin-bottom: 3rem;
-  }
+    animation: textTop 1s ease forwards;
+    animation-delay: 1s;
 
+  }
+  @keyframes textTop{
+    0%{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
   .con  {
     text-decoration: none;
     color:var(--black-color) ;
@@ -310,7 +324,7 @@ section {
     position: absolute;
     width: 0;
     height: 100%;
-    background-color: #87ceeb;
+    background-color: var(--main-color);
     left: -5%;
     bottom: 0;
     transform: skewX(-19deg);
@@ -376,8 +390,6 @@ section {
  
 .hero-img{
     position: relative;
-    animation: floatImage 4s ease-in-out infinite;
-    animation-delay: 3s;
     left: 9%;
     transform: translateY(70px);
 }
@@ -387,8 +399,19 @@ section {
     width: 340px;
     height: auto;
     z-index: 10;
-
-   
+    opacity: 0;
+    animation: zoomImage 1s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes zoomImage {
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
 }
 .seprator{
     margin: 70px -60px 30px;
@@ -435,7 +458,7 @@ justify-content: start;
     font-weight: var(--font-bolder);
 }
 .about-info1 h1 span{
-    text-decoration: 5px underline #87ceeb;
+    text-decoration: 5px underline var(--main-color);
 }
 .about .info p{
     color: var(--black-color);
@@ -602,7 +625,7 @@ justify-content: start;
     align-items: center;
 }
 .coding .item{
-    background: #383d52;
+    background: var(--skills-bg);
     width: 175px;
     height: 175px;
     display: flex;
@@ -656,7 +679,7 @@ justify-content: start;
 }
 
 #react  {
-    color: #87ceeb;
+    color: var(--main-color);
 }
 
 .coding .item-d{
@@ -926,7 +949,7 @@ a {
 
 
 .con-btn{
-    background: #87ceeb;
+    background: var(--main-color);
     width: 30%;
     padding: 10px;
     border-radius:1rem;
@@ -935,7 +958,7 @@ a {
     font-size: 15px;
     font-weight: 900;
     color: #fff;  
-    border: 1px solid #87ceeb;
+    border: 1px solid var(--main-color);
     overflow: hidden;
     transition: 0.29s ease-in;
     margin-left: 7px;
@@ -949,7 +972,7 @@ a {
 .con-btn:hover{
     color: #87ceeb;
     background: #333;
-    border: 1px solid #87ceeb;
+    border: 1px solid var(--main-color);
     transition: 0.8s ease-in;
 
 }
@@ -1110,7 +1133,7 @@ footer{
     align-items: end;
     justify-content: space-around;
     position: absolute;
-    background-color: #87ceeb;
+    background-color: var(--main-color);
     padding: 30px 25px;
     border-radius: 10px;
     width: 60%;
@@ -1983,7 +2006,7 @@ footer .youtube-link:hover{
     }
 
     .home-detail h3{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .guarantee .item .icon i{
 
