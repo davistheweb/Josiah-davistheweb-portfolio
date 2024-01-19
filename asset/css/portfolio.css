@@ -287,16 +287,6 @@ section {
     animation-delay: 1s;
 
   }
-  @keyframes textTop{
-    0%{
-        transform: translateY(-500px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-  }
   .con  {
     text-decoration: none;
     color:var(--black-color) ;
@@ -403,19 +393,9 @@ section {
     animation: zoomImage 1s ease forwards;
     animation-delay: 2s;
 }
-@keyframes zoomImage {
-        0%{
-            transform: scale(0);
-            opacity: 0;
-        }
-        100%{
-            transform: scale(1);
-            opacity: 1;
-        }
-}
 .seprator{
     margin: 70px -60px 30px;
-    padding: .4rem;
+    padding: .3rem;
     font-family: var(--general-font);
     display: inline-block;
     color: var(--black-color);
@@ -475,6 +455,7 @@ justify-content: start;
 .about .info button{
     margin-top: 35px;
     font-size: 18px;
+    
 }
 .about .info button i{
     vertical-align: middle;
@@ -782,7 +763,22 @@ a {
   .card__img:hover{
     transform: scale(1.1);
   }
- 
+ .explore{
+    position: absolute;
+    margin-left: 5rem;
+    z-index: 10;
+   margin-top: 5rem;
+   font-family: var(--general-font);
+   font-weight: var(--font-bold);
+    font-size: 20px;
+    color: var(--main-color);
+    transform: scale(0);
+    transition: 0.5s ease;
+ }
+ .card__image:hover .explore{
+    transform: scale(1);
+    z-index: 100;
+ }
   .card__name {
     font-size: var(--h2-font-size);
     color: var(--black-color);
@@ -854,10 +850,7 @@ a {
   .swiper-pagination-bullet-active {
     background-color: var(--main-color);
   }
-  
-  
-  
-  /* For medium devices */
+  /*-----======BreakPoints----=====*/
   @media screen and (min-width: 768px) {
     .card__content {
       margin-inline: 1rem;
@@ -871,7 +864,6 @@ a {
     }
   }
   
-  /* For large devices */
   @media screen and (min-width: 1120px) {
     .card__container {
       max-width: 1120px;
@@ -1326,11 +1318,12 @@ footer .youtube-link:hover{
    
    
 }
-.footer-end a span{
+.footer-end a .dav-name{
     text-decoration: 5px underline var(--main-color);
      font-family: var(--general-font);
     font-weight: var(--font-bold);
 }
+
 .scroll-btn {
     position: fixed;
     right: 1rem;
@@ -1365,24 +1358,26 @@ footer .youtube-link:hover{
       transform: translateX(7px);
     }
   }
-  /*
-@keyframes floatImage{
+  
+@keyframes zoomImage {
     0%{
-        transform: translateX(-20px);
+        transform: scale(0);
+        opacity: 0;
     }
     100%{
-        transform: translateX(22);
+        transform: scale(1);
+        opacity: 1;
     }
 }
-
-*/
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes textTop{
+0%{
+    transform: translateY(-500px);
+    opacity: 0;
+}
+100%{
+    transform: translateY(0);
+    opacity: 1;
+}
 }
 
 /*------------------==============BreakPoint(S)===========---------------------*/
@@ -1936,6 +1931,20 @@ footer .youtube-link:hover{
     }
 }
 @media screen and (max-width:480px){
+    .card__data {
+        padding: 1rem;
+      }
+      .swiper-button-next{
+        margin-right: -20px;
+      }
+      .swiper-button-prev {
+        margin-left: -20px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+          display: block;
+          font-size: 50px;
+      }
     .guarantee .item{
         margin-top: 20px;
     }
@@ -2019,16 +2028,6 @@ footer .youtube-link:hover{
         font-size: 10.2px;
         font-weight: var(--font-medium);
        }
-    .card__data {
-        padding: 1rem;
-      }
-      .swiper-button-next,
-      .swiper-button-prev {
-          display: block;
-          margin-right: -30rem;
-          
-          font-size: 30px;
-      }
       footer .abt-ft-clo .ft-name2 p{
         width: 40vh;
        }

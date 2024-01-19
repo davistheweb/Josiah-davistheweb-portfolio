@@ -177,3 +177,15 @@ ScrollReveal().reveal('.home-detail,.tool, .about-info1, .contact-i, .linkcol1, 
 ScrollReveal().reveal('.about-img,.contact-i, .icon, .item-f, .seprator, .about-img, .abt-ft-clo', { origin: 'left' });
 ScrollReveal().reveal('.skills, .item-l, .item-d, .info, .port-2, .con-btn, .ft-start, .tool-name, .fottersocials', { origin: 'right'});
 ScrollReveal().reveal('.abt-name, .port-1, .container, .end, .youtube', { origin: 'bottom' });
+
+//const button = document.getElementsByClassName ("download-btn");
+
+//button.onclick (); {
+//window.location.href='https://drive.google.com/file/d/1stIaIGL0MkS8NwzXGeaJkcVi378wv8YD/view?usp=drive_link'
+//};
+
+function redirectToLink() {
+  window.location.href ="https://drive.google.com/file/d/1stIaIGL0MkS8NwzXGeaJkcVi378wv8YD/view?usp=drive_link";
+}
+
+document.getElementById("download-btn").addEventListener("click", redirectToLink);
