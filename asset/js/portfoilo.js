@@ -189,3 +189,23 @@ function redirectToLink() {
 }
 
 document.getElementById("download-btn").addEventListener("click", redirectToLink);
+
+function getCurrentYearAndDay() {
+  var currentYear = new Date().getFullYear(); // Get the current year
+  var currentDay = new Date().getDate(); // Get the day of the month
+
+  return {
+    year: currentYear,
+    day: currentDay
+  };
+}
+
+// Get the HTML element with the id "newdate"
+var newDateElement = document.getElementById("newdate");
+
+// Get the current year and day
+var currentYearAndDay = getCurrentYearAndDay();
+
+// Create the desired format (e.g., "2024/21") and update the content of the "newdate" element
+var formattedDate = currentYearAndDay.year + '/' + currentYearAndDay.day;
+newDateElement.innerHTML = " " + formattedDate;

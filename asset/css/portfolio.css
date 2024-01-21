@@ -1318,6 +1318,9 @@ footer .youtube-link:hover{
    
    
 }
+#newdate{
+    font-family: var(--general-font);
+}
 .footer-end a .dav-name{
     text-decoration: 5px underline var(--main-color);
      font-family: var(--general-font);
