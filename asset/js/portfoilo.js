@@ -76,13 +76,6 @@ window.onscroll = () => {
     });
 };
 
-/*SHOW SCROLL UP*/
-function scrollTop() {
-  const scrollUp = document.getElementById('scroll-up');
-  // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 500) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-};
-window.addEventListener('scroll', scrollTop)
 
 // function: Text Generate
 
@@ -132,6 +125,22 @@ function consoleText(words, id, colors,) {
   }, 400);
 };
 
+/*SHOW SCROLL UP*/
+function scrollTop() {
+  const scrollUp = document.getElementById('scroll-up');
+  // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+  if (this.scrollY >= 500) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+};
+window.addEventListener('scroll', scrollTop);
+
+//Resume link
+function redirectToLink() {
+  window.location.href ="https://drive.google.com/file/d/1stIaIGL0MkS8NwzXGeaJkcVi378wv8YD/view?usp=drive_link";
+}
+
+document.getElementById("download-btn").addEventListener("click", redirectToLink);
+
+
 // Project Swiper
 
 let swiperCards = new Swiper(".card__content", {
@@ -160,7 +169,23 @@ let swiperCards = new Swiper(".card__content", {
   },
 });
 
+//Footer Year/Date
+function getCurrentYearAndDay() {
+  var currentYear = new Date().getFullYear();
+  var currentDay = new Date().getDate(); 
 
+  return {
+    year: currentYear,
+    day: currentDay
+  };
+}
+
+var newDateElement = document.getElementById("newdate");
+
+var currentYearAndDay = getCurrentYearAndDay();
+
+var formattedDate = currentYearAndDay.year + '/' + currentYearAndDay.day;
+newDateElement.innerHTML = " " + formattedDate;
 
 // scroll reveal
 
@@ -184,28 +209,3 @@ ScrollReveal().reveal('.abt-name, .port-1, .container, .end, .youtube', { origin
 //window.location.href='https://drive.google.com/file/d/1stIaIGL0MkS8NwzXGeaJkcVi378wv8YD/view?usp=drive_link'
 //};
 
-function redirectToLink() {
-  window.location.href ="https://drive.google.com/file/d/1stIaIGL0MkS8NwzXGeaJkcVi378wv8YD/view?usp=drive_link";
-}
-
-document.getElementById("download-btn").addEventListener("click", redirectToLink);
-
-function getCurrentYearAndDay() {
-  var currentYear = new Date().getFullYear(); // Get the current year
-  var currentDay = new Date().getDate(); // Get the day of the month
-
-  return {
-    year: currentYear,
-    day: currentDay
-  };
-}
-
-// Get the HTML element with the id "newdate"
-var newDateElement = document.getElementById("newdate");
-
-// Get the current year and day
-var currentYearAndDay = getCurrentYearAndDay();
-
-// Create the desired format (e.g., "2024/21") and update the content of the "newdate" element
-var formattedDate = currentYearAndDay.year + '/' + currentYearAndDay.day;
-newDateElement.innerHTML = " " + formattedDate;
