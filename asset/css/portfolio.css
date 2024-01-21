@@ -1318,7 +1318,7 @@ footer .youtube-link:hover{
    
    
 }
-.footer-end a .dav-name{
+.footer-end span{
     text-decoration: 5px underline var(--main-color);
      font-family: var(--general-font);
     font-weight: var(--font-bold);
