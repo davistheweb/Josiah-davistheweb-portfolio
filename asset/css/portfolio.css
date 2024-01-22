@@ -567,6 +567,7 @@ justify-content: start;
 }
 .skills .left .info h3 span{
     text-decoration: 5px underline  var(--main-color);
+    z-index: 100;
 }
 .skills .left .info p{
     color: var(--black-color);
@@ -1326,7 +1327,7 @@ footer .youtube-link:hover{
 #newdate{
     font-family: var(--general-font);
 }
-.footer-end .dav-name{
+footer .footer-end a .dav-name{
     text-decoration: 5px underline var(--main-color);
      font-family: var(--general-font);
     font-weight: var(--font-bold);
@@ -1742,11 +1743,12 @@ footer .youtube-link:hover{
         left: 0%;
     }
     .hi::before{
-        top: 21vh;
+        top: 15vh;
+        right: 5vh;
     }
     .con{
         font-size: 15px;
-        margin-top: -5%;
+        margin-top: -2%;
     }
     .socials{
         margin-top: 5rem;
@@ -1895,7 +1897,7 @@ footer .youtube-link:hover{
    }
    footer .abt-ft-clo .ft-name p{
     font-size: 17px;
-    margin-top: 10vh;
+    margin-top: 15vh;
    }
    footer .abt-ft-clo .ft-name2 p{
     width: 45vh;
@@ -2025,6 +2027,10 @@ footer .youtube-link:hover{
     .home-detail h3{
         font-size: 2.5rem;
     }
+    .hi::before{
+        top: 22vh;
+        right: 5vh;
+    }
     .guarantee .item .icon i{
 
         font-size: 25px;
@@ -2036,6 +2042,10 @@ footer .youtube-link:hover{
         font-size: 10.2px;
         font-weight: var(--font-medium);
        }
+
+       .con-btn{
+        font-size: 14px;
+    }
       footer .abt-ft-clo .ft-name2 p{
         width: 40vh;
        }
@@ -2055,11 +2065,14 @@ footer .youtube-link:hover{
        .youtube .youtube-link{
         margin-top: 15%;
         left: -10.9%;
-        width: 55%;
+        font-size: 19px;
        }
        footer .footer-end p{
         padding-top: 10vh;
         
+       }
+       footer .footer-end a .dav-name{
+        text-decoration: underline ;
        }
 }
 
@@ -2072,5 +2085,12 @@ footer .youtube-link:hover{
     }
     .home-detail h3{
         font-size: 2rem;
+    }
+    .guarantee .item .info p{
+        font-size: 10px;
+        
+    }
+    .youtube .youtube-link{
+        font-size: 15px;
     }
 }

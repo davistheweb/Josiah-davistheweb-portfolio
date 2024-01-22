@@ -171,8 +171,8 @@ let swiperCards = new Swiper(".card__content", {
 
 //Footer Year/Date
 function getCurrentYearAndDay() {
-  var currentYear = new Date().getFullYear();
-  var currentDay = new Date().getDate(); 
+  const currentYear = new Date().getFullYear();
+ const currentDay = new Date().getDate(); 
 
   return {
     year: currentYear,
@@ -180,11 +180,11 @@ function getCurrentYearAndDay() {
   };
 }
 
-var newDateElement = document.getElementById("newdate");
+const newDateElement = document.getElementById("newdate");
 
-var currentYearAndDay = getCurrentYearAndDay();
+const currentYearAndDay = getCurrentYearAndDay();
 
-var formattedDate = currentYearAndDay.year + '/' + currentYearAndDay.day;
+const formattedDate = currentYearAndDay.year + '/' + currentYearAndDay.day;
 newDateElement.innerHTML = " " + formattedDate;
 
 // scroll reveal
