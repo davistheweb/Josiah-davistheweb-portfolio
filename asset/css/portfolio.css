@@ -182,7 +182,7 @@ ul.navlist{
     
 }
 #menu-bar{
-    font-size: 20px;
+    font-size: 12px;
     color: var(--black-color);
     display: block;
     position:absolute ;
@@ -390,7 +390,8 @@ section {
     height: auto;
     z-index: 10;
     opacity: 0;
-    animation: zoomImage 1s ease forwards;
+    animation: zoomImage 2s ease forwards;
+
     animation-delay: 2s;
 }
 .seprator{
@@ -700,6 +701,10 @@ justify-content: start;
     font-family: var(--general-font);
     font-weight: var(--font-regular);
     width: 90%;
+}
+.quot{
+    font-size: 35px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 a {
     text-decoration: none;
@@ -1704,7 +1709,7 @@ footer .youtube-link:hover{
     #menu-bar{
         display: block;
         color: var(--black-color);
-        font-size: 40px;
+        font-size: 30px;
     }
     .btn{
         display: none;
