@@ -781,10 +781,6 @@ a {
     transform: scale(0);
     transition: 0.5s ease;
  }
- .card__image:hover .explore{
-    transform: scale(1);
-    z-index: 100;
- }
   .card__name {
     font-size: var(--h2-font-size);
     color: var(--black-color);
@@ -1173,13 +1169,9 @@ footer{
 .ft-start button i{
     vertical-align: middle;
 }
-footer .ft-clo{
+ .ft-clo{
     display: flex;
-    align-items: start;
-}
-
-footer .ft-clo .about-ft-clo{
-    flex: 3;
+    
 }
 footer .abt-ft-clo .ft-name p{
     color: var(--black-color);
@@ -1205,21 +1197,20 @@ footer .abt-ft-clo .ft-name2 p{
 footer .abt-ft-clo .linkcol1{
     flex: 3;
 }
-footer .linkcol1{
+ .linkcol1{
     margin-top: 40px;
-    display: block;
+    display: grid;
     font-weight: var(--font-regular);
     font-family: var(--general-font);
+    row-gap: .75rem;
 }
 footer .linkcol1 a{
     color: var(--black-color);
     font-family: var(--general-font);
     font-weight: var(--font-medium);
-    display: block;
     text-decoration: 2px underline var(--main-color);
     font-size: 20px;
     line-height: 26px;
-    row-gap: .75rem;
 }
  /* Socials*/
   
@@ -1262,17 +1253,18 @@ footer .linkcol1 a{
     align-items: center;
 }
 
-footer .youtube{
-   position: relative;
-   display: block;
-   margin-top: -2%;
+ .youtube{
+   display: grid;
+   justify-content: end;
+   align-content: end;
+   row-gap: .75rem;
+   margin-top: 2rem;
+   margin-left: 2.5rem;
+   
 }
  .youtube-head{
     color: var(--white-color);
-    margin-left: 70%;
-    margin-top: -7%;
     font-size: 17px;
-    position: absolute;
     font-family: var(--general-font);
     font-weight: var(--font-bold);
 }
@@ -1281,22 +1273,18 @@ footer .youtube-description{
     color:var(--white-color);
     font-family: var(--general-font);
     font-weight: var(--font-medium);
-    margin-left: 70%;
-    margin-top:-4%;
-    position: absolute;
     text-decoration: 2px underline var(--main-color);
 }
 footer .youtube-link{
-    position: absolute;
-    margin-left: 70%;
-    margin-top: -1%;
     text-decoration: none;
     font-size: 20px;
+    display:inline-block;
     font-family: var(--general-font);
     font-weight: var(--font-bold);
     color: #fff;
+    border: none;
     background-color: #000;
-    padding: .7rem;
+    padding: 15px 25px;
     border-radius: 3px;
 }
 footer .youtube-link i{
@@ -1448,33 +1436,20 @@ footer .footer-end a .dav-name{
     }
 
     footer .linkcol1{
-    margin-left: -12%;
+    margin-left: -8%;
    flex-basis: 50%;
     }
 
-    footer .ft-clo .fottersocials{
-    flex-basis: 30%;
+    .fottersocials{
+    flex-basis: 50%;
     margin-left: 3%;
+    gap: 10px;
     }
-
-    footer .youtube{
-    margin-top: -18vh;
-    right: 5%;
-    }
-
-    footer .youtube-head{
-   font-size: 17px;
-   right:5% ;
-    }
-
-    footer .youtube-description{
-    margin-top: 5px;
-    }
-
-    footer .youtube-link{
-    margin-top: 5%;
-    }
-
+  footer .youtube{
+    position: relative;
+    margin-top: -25vh;
+    
+  }
     .footer-end{
     margin-top: 25vh;
     padding-bottom: 20px;
@@ -1610,21 +1585,13 @@ footer .footer-end a .dav-name{
     .cdemac{
         display: none;
     }
-    footer .youtube{
-        margin-top: -21%;
-        right: 5%;
+   
+.youtube{
+    flex-basis: 100%;
+    .youtube-head{
+        font-size: 12px;
     }
-  footer .youtube .youtube-head{
-        margin-right: -10vh;
-        width: 45%;
-        font-size: 13px;
-        margin-top: -2.5vh;
-        transform: translateY(auto);
-    }
-    footer .youtube .youtube-description{
-        margin-top: -1%;
-        width: 35%;
-    }
+}
 
 }
 @media screen and (max-width:768px){
@@ -1632,19 +1599,24 @@ footer .footer-end a .dav-name{
     ul.navlist{
         display: none;
     }
+    #menu-bar{
+        display: block;
+        color: var(--black-color);
+        font-size: 30px;
+    }
     .navmenu{
        position: absolute;
        top: -1000vh;
         left: 0;
-        width: 100vh;
-        height: 40vh;
+        width: 110vh;
+        height: 50vh;
         background-color: var(--res-dec);
         font-weight: var(--font-bolder);
         display: flex;
         gap: 8rem;
         flex-wrap: wrap;
-        transition: all 0.6s ease;
         border-radius: 10px;
+        transition:all 1s ease-in;
     
     }
 
@@ -1652,7 +1624,6 @@ footer .footer-end a .dav-name{
     display: flex;
     gap: 5.5rem;
     margin-top: -12rem;
-    transition: all 0.6s ease;
  }
     .navmenu a{ 
         color: var(--black-color);
@@ -1700,7 +1671,7 @@ footer .footer-end a .dav-name{
     
     .navmenu.open{
         top: 3%;
-        transition: all 0.5s ease;
+        transition: all 1s ;
     }
     .hi::before{
         top: 30vh;
@@ -1709,12 +1680,7 @@ footer .footer-end a .dav-name{
    .scroll-down{
     display: none;
    }
-    #menu-bar{
-        display: block;
-        color: var(--black-color);
-        font-size: 30px;
-        transition: 0.6s ease;
-    }
+  
     .home{
         margin-top: 3rem;
         grid-gap: 0;
@@ -1750,7 +1716,7 @@ footer .footer-end a .dav-name{
         left: 0%;
     }
     .hi::before{
-        top: 15vh;
+        top: 20vh;
         right: 5vh;
     }
     .con{
@@ -2092,6 +2058,9 @@ footer .footer-end a .dav-name{
     }
     .home-detail h3{
         font-size: 2rem;
+    }
+    .guarantee .item .info h3{
+        font-size: 12px;
     }
     .guarantee .item .info p{
         font-size: 10px;
