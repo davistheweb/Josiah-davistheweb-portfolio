@@ -1427,28 +1427,21 @@ footer .footer-end a .dav-name{
     top: -15%;
     }
 
-    footer .ft-clo{
+   
+   .ft-clo{
     flex-wrap: wrap;
-    }
-
-    footer .ft-clo .abt-ft-clo{
-    flex-basis: 50%;
-    }
-
+    row-gap: 2rem;
+   }
     footer .linkcol1{
     margin-left: -8%;
-   flex-basis: 50%;
     }
-
     .fottersocials{
-    flex-basis: 50%;
     margin-left: 3%;
     gap: 10px;
     }
-  footer .youtube{
-    position: relative;
-    margin-top: -25vh;
-    
+  .youtube-head{
+    font-size: 15px;
+    width: 150%;
   }
     .footer-end{
     margin-top: 25vh;
@@ -1585,15 +1578,12 @@ footer .footer-end a .dav-name{
     .cdemac{
         display: none;
     }
-   
-.youtube{
-    flex-basis: 100%;
-    .youtube-head{
-        font-size: 12px;
-    }
-}
+
+
 
 }
+
+
 @media screen and (max-width:768px){
 
     ul.navlist{
@@ -1608,12 +1598,14 @@ footer .footer-end a .dav-name{
        position: absolute;
        top: -1000vh;
         left: 0;
-        width: 110vh;
+        width: 100%;
         height: 50vh;
         background-color: var(--res-dec);
         font-weight: var(--font-bolder);
         display: flex;
         gap: 8rem;
+        justify-content: center;
+        align-content: center;
         flex-wrap: wrap;
         border-radius: 10px;
         transition:all 1s ease-in;
@@ -1622,46 +1614,25 @@ footer .footer-end a .dav-name{
 
  .wrap{
     display: flex;
-    gap: 5.5rem;
     margin-top: -12rem;
  }
     .navmenu a{ 
         color: var(--black-color);
         z-index: 1;
-        font-size: 25px;
+        font-size: 10px;
         font-family: var(--general-font);
         
-    }
-    
-    .navmenu .resp{
-        display: block;
-        font-size: 25px;
-        position: absolute;
-        font-weight: var(--font-medium);
-        justify-content: center;
-        margin-left: 55vh;
-        margin-top: 12vh;
-
-    }
-   .navmenu .resp i{
-    font-size: 20px;
-   }
-    .resp:hover{
-        position: absolute;
-        color: var(--black-color);
-        box-shadow: var(--hover-box-shadow);
     }
     .navmenu li a{
     align-items: center;
     justify-items: center;
     display:flex;
-    margin: 9vh 5vh;
+    margin: 9vh 10vh;
     flex-direction: column-reverse;
     text-decoration: none;
     }
-  
     .navmenu i{
-    font-size: 35px;
+    font-size: 20px;
     }
     .navmenu li a:hover,
     .navmenu li a.active{
@@ -1706,8 +1677,20 @@ footer .footer-end a .dav-name{
     .about{
         flex-direction: column-reverse;
     }
-    
-
+     .coding .item-f,
+     .coding .item-d
+    {
+          gap: 12px;
+    }
+    .ft-start h3{
+        font-size: 15px;
+    }
+    .ft-start p{
+        font-size: 12px;
+    }
+     .contact-me{
+        font-size: 10px;
+     }
 }
 @media screen and (max-width:600px){
 
@@ -1799,16 +1782,13 @@ footer .footer-end a .dav-name{
     .coding .item-l{
         gap: 10px;
      }
-    .coding .item-f{
+    .coding .item-f,
+    .coding .item-d
+    {
         flex-wrap: wrap;
         gap: 12px;
     }
-    .coding .item-d {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .project-info p{
+       .project-info p{
         font-size: 15px;
     }
     .contact-info{
@@ -1841,7 +1821,7 @@ footer .footer-end a .dav-name{
         font-size: 12px;
     }
     .con-btn{
-        font-size: 15px;
+        font-size: 12px;
         width: 25vh;
         height: 10vh;
     }
@@ -1851,10 +1831,10 @@ footer .footer-end a .dav-name{
         margin-right: 2px;
     }
     footer{
-        margin-top: 25vh;
+        margin-top: 35vh;
     }
      .ft-start{
-        top: -9%;
+        top: 9%;
        flex-wrap: wrap;
        
     }
@@ -1865,9 +1845,6 @@ footer .footer-end a .dav-name{
    .contact-me{
     font-size: 17px;
    }
-   footer .ft-clo .about-ft-clo{
-    flex-basis: 100%;
-   }
    footer .abt-ft-clo .ft-name p{
     font-size: 17px;
     margin-top: 15vh;
@@ -1876,36 +1853,14 @@ footer .footer-end a .dav-name{
     width: 45vh;
    }
    footer .linkcol1{
-    flex-basis: 100%;
+    flex-basis: 40%;
     margin-left: 8%;
    }
    footer .ft-clo .fottersocials{
-    flex-basis: 60%;
     margin-left: 8%;
    }
-   footer .youtube{
-    margin-top: 15%;
-    right: 30vh;
-    margin-left: 5%;
-   }
-  footer .youtube .youtube-head{
-    font-size: 13px;
-    right: -12rem;
-    width: 100%;
-   }
-   footer .youtube .youtube-description{
-    width: 110vh;
-    margin-top:5px;
-    left:-2%;
-   }
-   .youtube .youtube-link{
-    margin-top: 10%;
-    left: -1%;
-    width: 50%;
-   }
-   footer .footer-end p{
-    padding-bottom: -115%;
-   }
+  
+ 
     .my-socials{
         right: 15%;
     }
@@ -2027,16 +1982,11 @@ footer .footer-end a .dav-name{
         }
       footer .youtube .youtube-head{
         font-size: 13px;
-        right: -10rem;
-        width: 100%;
        }
        footer .youtube .youtube-description{
         width: 110vh;
-        margin-top:5px;
-        left:-7%;
        }
        .youtube .youtube-link{
-        margin-top: 15%;
         left: -10.9%;
         font-size: 19px;
        }
