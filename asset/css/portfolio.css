@@ -375,6 +375,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: animate 1s linear infinite;
     
 }  
  
@@ -1373,6 +1374,7 @@ footer .footer-end a .dav-name{
         opacity: 1;
     }
 }
+
 @keyframes textTop{
 0%{
     transform: translateY(-500px);
@@ -1382,6 +1384,15 @@ footer .footer-end a .dav-name{
     transform: translateY(0);
     opacity: 1;
 }
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(260deg);
+    }
 }
 
 /*------------------==============BreakPoint(S)===========---------------------*/
