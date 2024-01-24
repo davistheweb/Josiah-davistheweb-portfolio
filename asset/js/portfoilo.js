@@ -135,7 +135,7 @@ window.addEventListener('scroll', scrollTop);
 
 //Resume link
 function redirectToLink() {
-  window.location.href ="https://drive.google.com/file/d/1stIaIGL0MkS8NwzXGeaJkcVi378wv8YD/view?usp=drive_link";
+  window.location.href ="https://docs.google.com/document/d/1nprQtCPpyL63VvWSX7-L11Shna_0NkhorKCKhE_Ypd8/edit?usp=sharing";
 }
 
 document.getElementById("download-btn").addEventListener("click", redirectToLink);
