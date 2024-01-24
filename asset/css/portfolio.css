@@ -1473,35 +1473,31 @@ footer .footer-end a .dav-name {
     margin: 0;   
     }
 
-    .guarantee .item .info h3 {
-        font-size: 20px;
-    }
 
    .about .info p, .guarantee .item .info p
    {
     font-size: 13px;
    }
 
+    .guarantee .item .info h3 {
+        font-size: 20px;
+    }
+    
     .contact-i {
     width: 95%;
     margin-left: -7%;
     }
 
-    .contact-i .ss {
+    .contact-i .ss, 
+    .contact-i .sh,
+    .contact-i form textarea
+     {
     width:95%;
     }
 
     .contact-i .sd {
     width: 95%;
     margin-left: 2.9px;
-    }
-
-    .contact-i .sh {
-    width: 95%;
-    }
-
-    .contact-i form textarea {
-    width: 95%;
     }
 
     .contact-i form input::placeholder,
@@ -1551,24 +1547,23 @@ footer .footer-end a .dav-name {
         padding-right: 3%;
     }
 
-    .demac-head {
+    .demac-head,
+    .scroll-down,
+    .cdemac
+    {
         display: none;
     }
     
   .home {
    margin-top: -5rem;
    flex-direction: column-reverse;
-  } 
+     } 
 
  .hero-img {
    left: -7%;
     transform: translateY(30px);
     margin-top: 9rem;
-  } 
-
- .scroll-down {
-    display: none;
-  } 
+     } 
 
     ul.navlist {
         margin-left: -15%;
@@ -1576,11 +1571,11 @@ footer .footer-end a .dav-name {
 
    .home-detail h3 {
     font-size: 5rem;
- }
+    }
 
     .seprator {
     margin-left: 5px; 
- }
+    }
     .container-home { 
         height: 100%;
     }
@@ -1594,14 +1589,17 @@ footer .footer-end a .dav-name {
     .about .download-btn {
         height: 70px;
     }
+
     .guarantee {
         flex-wrap: wrap;
     }
+
     .guarantee .item {
         box-shadow: var(--hover-box-shadow);
         flex-basis: 49%;
         margin-top: 20px;
     }
+
     .skills {
         justify-content: space-between;  
     }
@@ -1683,10 +1681,6 @@ footer .footer-end a .dav-name {
        margin-left: 1px;
         margin-top: 10px;
     } 
-
-    .cdemac {
-        display: none;
-    }
 
 }
 
@@ -1862,7 +1856,12 @@ footer .footer-end a .dav-name {
         font-size: 19px;
     }
 
-    .navmenu a {
+    .navmenu a,.about-info1,
+     .about .info p,
+     .about .info .download-btn, 
+    .skills .left .info p,
+    .project-info p
+    {
         font-size: 15px;
     }
 
@@ -1870,25 +1869,10 @@ footer .footer-end a .dav-name {
         margin-left: 15px;
     }
 
-    .about-info1 {
-        font-size: 15px;
-    }
-
-    .about .info p {
-        font-size: 15px;
-    }
-
-  .about .info .download-btn {
-    font-size: 15px;
-   }
-
     .skills .left .info h3{
         font-size: 25px;
     }
 
-    .skills .left .info p {
-        font-size: 15px;
-    }
     .tool {
         font-size: 17px;
     }
@@ -1904,9 +1888,7 @@ footer .footer-end a .dav-name {
         flex-wrap: wrap;
         gap: 12px;
     }
-       .project-info p {
-        font-size: 15px;
-    }
+    
     .contact-info {
         flex-direction: column;
     }
