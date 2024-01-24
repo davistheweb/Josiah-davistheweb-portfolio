@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
 
 /* Webkit*/
-::-webkit-scrollbar
-{
-    width: 7px;
-    
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: var(--scroolbar-color);
+    border-radius: 0.5rem;
 }
-
-
-::-webkit-scrollbar-thumb
-{   overflow-y:scroll;
-    background: var(--main-color);
-    border-radius: 5px;
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroolbar-color);
+    border-radius: 0.5rem;
 }
     /* Variables*/
 :root{
@@ -22,6 +22,7 @@
     rgba(0,0,0,0.23)0px 6px 6px;     
     --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%); 
     --main-color:#0ef;  
+    --scroolbar-color:transparent;
     --skills-bg:#383d52;
     --text-color:#000;
     --black-color:#000;  
@@ -53,8 +54,6 @@
     --res-dec:#3e3e3e;
     
 }
-
-
    *{
 
     margin: 0;
@@ -166,6 +165,7 @@ ul.navlist{
 }
 .btn:hover,.btn-box :hover{
     box-shadow: var(--hover-box-shadow);
+    background-color: var(--main-color);
 }
 .navlist .resp {
     display: none;
@@ -1278,6 +1278,7 @@ footer .youtube-description{
 footer .youtube-link{
     text-decoration: none;
     font-size: 20px;
+    cursor: pointer;
     display:inline-block;
     font-family: var(--general-font);
     font-weight: var(--font-bold);
@@ -1290,6 +1291,12 @@ footer .youtube-link{
 footer .youtube-link i{
     vertical-align: middle;
     color: red;
+}
+
+footer .youtube-link lord-icon{
+    vertical-align: middle;
+    width: 30px;
+    height: 25px;  
 }
 footer .youtube-link:hover{
     box-shadow: rgba(252, 2, 2, 0.19)0px 10px 20px,
@@ -1393,7 +1400,9 @@ footer .footer-end a .dav-name{
     margin: 0;   
     }
 
-   
+   .about .info p{
+    font-size: 15px;
+   }
     .contact-i{
     width: 95%;
     margin-left: -7%;
@@ -1493,7 +1502,7 @@ footer .footer-end a .dav-name{
     }
     .about .info p{
         margin-top: 25px;
-        font-size: 25px;
+        font-size: 12px;
         width: 100%;
     }
     .about .download-btn{
@@ -1501,11 +1510,13 @@ footer .footer-end a .dav-name{
     }
         .guarantee{
         flex-wrap: wrap;
+
         
     }
     .guarantee .item{
         box-shadow: var(--hover-box-shadow);
         flex-basis: 49%;
+        margin-top: 20px;
     }
     .skills{
         justify-content: space-between;
@@ -1586,6 +1597,10 @@ footer .footer-end a .dav-name{
 
 @media screen and (max-width:768px){
 
+    header .logo{
+        font-size: 1.3rem;
+    }
+
     ul.navlist{
         display: none;
     }
@@ -1594,28 +1609,27 @@ footer .footer-end a .dav-name{
         color: var(--black-color);
         font-size: 30px;
     }
+  
     .navmenu{
        position: absolute;
        top: -1000vh;
         left: 0;
         width: 100%;
-        height: 50vh;
         background-color: var(--res-dec);
         font-weight: var(--font-bolder);
-        display: flex;
-        gap: 8rem;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
+        padding: 2rem 1.5rem 4rem;
         border-radius: 10px;
+        cursor: pointer;
         transition:all 1s ease-in;
-    
     }
-
- .wrap{
-    display: flex;
-    margin-top: -12rem;
- }
+    .nav-grid{
+        display: grid;
+        gap: 1.5rem;
+    }
+    .navlist-items{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
     .navmenu a{ 
         color: var(--black-color);
         z-index: 1;
@@ -1626,8 +1640,8 @@ footer .footer-end a .dav-name{
     .navmenu li a{
     align-items: center;
     justify-items: center;
+    margin-top: 2rem;
     display:flex;
-    margin: 9vh 10vh;
     flex-direction: column-reverse;
     text-decoration: none;
     }
@@ -1636,8 +1650,7 @@ footer .footer-end a .dav-name{
     }
     .navmenu li a:hover,
     .navmenu li a.active{
-        color: var(--main-color);
-        
+        color: var(--main-color);   
     }
     
     .navmenu.open{
@@ -1672,7 +1685,7 @@ footer .footer-end a .dav-name{
     .dark-toogle{
         position: absolute;
         margin-right: 15%;
-        font-size: 24px;
+        font-size: 23px;
     }
     .about{
         flex-direction: column-reverse;
@@ -1699,7 +1712,7 @@ footer .footer-end a .dav-name{
         left: 0%;
     }
     .hi::before{
-        top: 20vh;
+        top: 30vh;
         right: 5vh;
     }
     .con{
@@ -1725,35 +1738,12 @@ footer .footer-end a .dav-name{
     .home-detail h3{
         font-size: 3rem;
     }
-   
-    .wrap{
-        left: -1%;
-        gap: 2.6rem;
-        margin-top: 7rem;
-        position: absolute;
-      
-    }
-    .navmenu .resp{
-        width: 45%;
-      font-size: 15px;
-        margin-left: 35vh;
-        margin-top: 11vh;
-    }
-    .navmenu{
-    gap: 7vh;
-        height: 35vh;
-    }
-    .navmenu li a{
-        margin: 9vh 3vh;
-        align-items: center;
-        justify-content: center;
-        
-    }
+
     .navmenu i{
-        font-size: 20px;
+        font-size: 19px;
     }
     .navmenu a{
-        font-size: 16px;
+        font-size: 15px;
     }
     .seprator{
         margin-left: 15px;
@@ -1918,35 +1908,8 @@ footer .footer-end a .dav-name{
 }
 @media screen and (max-width:380px)
 {
-
-
-    
-    .wrap{
-        left: -1%;
-        gap: 2rem;
-        margin-top: 7rem;
-        position: absolute;
-      
-    }
-    .navmenu .resp{
-        width: 50%;
-      font-size: 14px;
-        margin-left: 35vh;
-        position: absolute;
-        margin-top: 12vh;
-    }
-    .navmenu .resp i{
-        font-size: 17px;
-    }
-    .navmenu{
-    gap: 6vh;
-       
-    }
-    .navmenu li a{
-        margin: 10vh 4vh;
-    }
     .navmenu i{
-        font-size: 20px;
+        font-size: 18px;
     }
     .navmenu a{
         font-size: 12px;

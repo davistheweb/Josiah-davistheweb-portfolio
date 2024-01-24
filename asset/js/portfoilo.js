@@ -79,7 +79,7 @@ window.onscroll = () => {
 
 // function: Text Generate
 
-consoleText(['Software Developer','Cyber Security Ethical Hacker', ], 'name',);
+consoleText(['Software Developer','Certified Ethical Hacker', ], 'name',);
 function consoleText(words, id, colors,) {
   if (colors === undefined) colors = ['#808080'];
   const visible = true;
