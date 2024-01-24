@@ -860,18 +860,17 @@ justify-content: start;
 .swiper-button-next {
     width: initial;
     height: initial;
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: var(--main-color);
-    display: none;
     margin-top: -5%;
 }
   
 .swiper-button-prev {
-    margin-left: 5px;
+    margin-left: -5px;
 }
   
 .swiper-button-next {
-    margin-right: 5px;
+   margin-right: -5px;
 }
   
 .swiper-pagination-bullet {
