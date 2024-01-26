@@ -1720,6 +1720,7 @@ footer .footer-end a .dav-name {
         border-radius: 10px;
         cursor: pointer;
         transition:all 1s ease-in;
+        z-index: 100;
     }
 
     .nav-grid {
@@ -1785,9 +1786,10 @@ footer .footer-end a .dav-name {
     .btn {
         background-color: var(--github-media-background-color);
         margin-top: 10rem;
-        right: -8%;
+        right: -7.2%;
         font-size: 20px;
         color: var(--github-media-text-color);
+        
     }
 
     .guarantee .item {
