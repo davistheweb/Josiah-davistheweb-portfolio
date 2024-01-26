@@ -813,6 +813,22 @@
 
     <script src="asset/js/portfoilo.js"></script>
 
+    <!--=============== JavaScript Analysis For Pxxl Space ===============-->
+
+    <script src="asset/js/portfoilo.js"></script>
+    
+            <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://pxxl.space/tracker/', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log('AJAX response:', xhr.responseText);
+                }
+            };
+            xhr.send('data=' + encodeURIComponent(JSON.stringify({ pagePath: window.location.pathname, filePath: window.location.href })));
+    </script>
+
     <!--=============== End JavaScript ===============-->
 
 </body>
