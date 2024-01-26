@@ -163,7 +163,7 @@ ul.navlist {
     color: var(--main-text-color);
     margin-right: 3rem;
     padding: 8px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid var(--accent-color);
     font-family: var(--general-font);
     font-weight: var(--font-regular);
@@ -1784,7 +1784,7 @@ footer .footer-end a .dav-name {
 }
     .btn {
         background-color: var(--github-media-background-color);
-        margin-top: 45rem;
+        margin-top: 10rem;
         right: -8%;
         font-size: 20px;
         color: var(--github-media-text-color);
