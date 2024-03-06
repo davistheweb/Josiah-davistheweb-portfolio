@@ -37,6 +37,9 @@
     --res-dec:#dddcdb;
     --github-media-background-color:#000;
     --github-media-text-color:#fff;
+    --scrool-box-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
+    
+    
 
 
     /*---========Font Variables, Typo & Weight=======----*/
@@ -57,6 +60,7 @@ body.dark-theme {
     --1st-demac-color:#fff;
     --input-background-color:#3e3e3e; 
     --2nd-demac-color:#fff; 
+    --scrool-box-shadow:2px 2px 4px rgba(0, 0, 0, 0.2);
     --res-dec:#3e3e3e;
     --github-media-background-color:#000;
     
@@ -107,6 +111,10 @@ header {
     z-index: 100;
     transition: .3s;
     background-color: var(--background-color);
+}
+
+.show-header .header {
+    box-shadow: var(--scrool-box-shadow);
 }
 
 header .logo {

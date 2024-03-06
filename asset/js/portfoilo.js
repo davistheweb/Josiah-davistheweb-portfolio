@@ -125,6 +125,17 @@ function consoleText(words, id, colors,) {
   }, 400);
 };
 
+//Add header boxShadow 
+
+function headerScroll() {
+  const headerBoxShade = document.getElementById('header');
+
+  if(this.scrollY >= 50) document.body.classList.add('show-header'); else document.body.classList.remove('show-header');
+};
+
+window.addEventListener('scroll', headerScroll)
+
+
 /*SHOW SCROLL UP*/
 function scrollTop() {
   const scrollUp = document.getElementById('scroll-up');
