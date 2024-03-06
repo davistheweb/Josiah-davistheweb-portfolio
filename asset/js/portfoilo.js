@@ -16,6 +16,25 @@ navMenus.forEach(link => {
 });
 
 
+
+//Add header boxShadow 
+
+function headerScroll() {
+  const headerBoxShade = document.getElementById('header');
+
+  if(this.scrollY >= 50) {
+     document.body.classList.add('show-header');
+     console.log("Scrolled");
+    }
+      else {
+        document.body.classList.remove('show-header');
+        console.log("UnScrolled");
+      }
+};
+
+window.addEventListener('scroll', headerScroll)
+
+
 /* Remove navlist when user clicks outside the menu and navlist
 navlist.addEventListener("click", ()=>{
   navlist.classList.remove("open");
@@ -124,17 +143,6 @@ function consoleText(words, id, colors,) {
     visible = !visible;
   }, 400);
 };
-
-//Add header boxShadow 
-
-function headerScroll() {
-  const headerBoxShade = document.getElementById('header');
-
-  if(this.scrollY >= 50) document.body.classList.add('show-header'); else document.body.classList.remove('show-header');
-};
-
-window.addEventListener('scroll', headerScroll)
-
 
 /*SHOW SCROLL UP*/
 function scrollTop() {
