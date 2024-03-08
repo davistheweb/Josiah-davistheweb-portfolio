@@ -19,18 +19,26 @@ navMenus.forEach(link => {
 
 //Add header boxShadow 
 
-function headerScroll() {
-  const headerBoxShade = document.getElementById('header');
+//function headerScroll() {
+ // const headerBoxShade = document.getElementById('header');
 
-  if(this.scrollY >= 50) {
-     document.body.classList.add('show-header');
-     console.log("Scrolled");
-    }
-      else {
-        document.body.classList.remove('show-header');
-        console.log("UnScrolled");
-      }
-};
+ // if(this.scrollY >= 50) {
+     //document.body.classList.add('show-header');
+     //console.log("Scrolled");
+   // }
+    ///  else {
+     //   document.body.classList.remove('show-header');
+     //   console.log("UnScrolled");
+     // }
+//};
+
+//window.addEventListener('scroll', headerScroll)
+
+function headerScroll() {
+  const headerBoxShade = document.getElementById('header')
+
+  headerBoxShade =(this.scrollY >= 50) ? document.body.classList.add('show-header') : document.body.classList.remove('show-header')
+}
 
 window.addEventListener('scroll', headerScroll)
 
