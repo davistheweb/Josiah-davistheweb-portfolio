@@ -35,12 +35,12 @@ navMenus.forEach(link => {
 //window.addEventListener('scroll', headerScroll)
 
 function headerScroll() {
-  const headerBoxShade = document.getElementById('header')
+  const headerBoxShade = document.getElementById('header');
 
-  headerBoxShade =(this.scrollY >= 50) ? document.body.classList.add('show-header') : document.body.classList.remove('show-header')
-}
+  headerScroll = (this.scrollY >= 50) ? document.body.classList.add('show-header') : document.body.classList.remove('show-header');
+};
 
-window.addEventListener('scroll', headerScroll)
+window.addEventListener('scroll', headerScroll);
 
 
 /* Remove navlist when user clicks outside the menu and navlist
